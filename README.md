@@ -16,7 +16,7 @@
 ACERCA DE NOSOTROS
 -------------------------------------------------------------------------------------------------
 
-Rodrigo San Martin: tengo 26 años, soy abogado y trabajo en dos estudios diferentes, uno de ellos, de origen familiar.
+Rodrigo San Martin: tengo 26 años, soy abogado y trabajo en dos estudios diferentes, uno de ellos, de origen familiar.<br>
 Julian Martinez Nuñez: tengo 25 años, llevo ya varios años moviendome por el mundo de la programacion, en diversas instituciones y desde diferentes opticas. Quiero usar esta oportunidad para por fin entrar laboralmente a este hermoso mundo que es el desarrollo de software, me siento mas listo que nunca.
 
 SITIOS DE REFERENCIA
