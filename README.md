@@ -19,6 +19,7 @@ ACERCA DE NOSOTROS
 Rodrigo San Martin: tengo 26 años, soy abogado y trabajo en dos estudios diferentes, uno de ellos, de origen familiar.<br>
 Julian Martinez Nuñez: tengo 25 años, llevo ya varios años moviendome por el mundo de la programacion, en diversas instituciones y desde diferentes opticas. Quiero usar esta oportunidad para por fin entrar laboralmente a este hermoso mundo que es el desarrollo de software, me siento mas listo que nunca.
 Nicolás Cortés Galvis: 22 años, estudiante de tecnicatura universitaria en utn resistencia, comenzando a aprender sobre el mundo del desarrollo web desde 2020.
+
 SITIOS DE REFERENCIA
 -------------------------------------------------------------------------------------------------
 https://www.fullescabio.com DeliDrinks y Fullescabio estan en esta lista principalmente porque comparten la vision y la idea que queremos llevar a cabo con nuestro proyecto, consideramos que ambas marcas son pioneras en el rubro sobre el que queremos trabajar, que es la venta y distribucion de bebidas.<br>
