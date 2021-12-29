@@ -1,0 +1,22 @@
+{
+  "name": "grupo_4_tiendadebebidas",
+  "version": "1.0.0",
+  "description": "¿Qué productos o servicios brindará nuestro sitio?\r -------------------------------------------------------------------------------------------------\r 1)\tVenta mayorista y minorista de bebidas.\r 2)\tVenta de snacks que sirvan de acompañamientos a las bebidas.\r 3)\tVenta de accesorios de bebidas y cockteleria.\r 4)\tServicio de barra para eventos.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodrigosm95/grupo_4_tiendaDeBebidas.git"
+  },
+  "author": "Julian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rodrigosm95/grupo_4_tiendaDeBebidas/issues"
+  },
+  "homepage": "https://github.com/rodrigosm95/grupo_4_tiendaDeBebidas#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
