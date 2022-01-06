@@ -1,4 +1,8 @@
 # grupo_4_tiendaDeBebidas
+tablero de TRELLO
+-------------------------------------------------------------------------------------------------
+enlace: https://trello.com/b/00r0ZY4O
+
 
 ¿Qué productos o servicios brindará nuestro sitio?
 -------------------------------------------------------------------------------------------------
