@@ -4,7 +4,8 @@
   "description": "¿Qué productos o servicios brindará nuestro sitio?\r -------------------------------------------------------------------------------------------------\r 1)\tVenta mayorista y minorista de bebidas.\r 2)\tVenta de snacks que sirvan de acompañamientos a las bebidas.\r 3)\tVenta de accesorios de bebidas y cockteleria.\r 4)\tServicio de barra para eventos.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "nodemon": "nodemon app.js"
   },
   "repository": {
     "type": "git",
