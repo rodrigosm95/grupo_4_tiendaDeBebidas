@@ -147,6 +147,12 @@ header ul {
     justify-content: center;
 }
 
+.acompañamientos h3{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
 .producto_acompañamiento img{
     width: 100%;
 }
@@ -158,4 +164,27 @@ header ul {
     border: solid 2px;
     margin-bottom: 10px;
     border-radius: 2%;
+}
+
+
+
+@media (min-width: 361px){
+    .productos_acompañamientos{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .acompañamientos h3{
+        margin-bottom: 10px;
+    }
+
+    .producto_acompañamiento{
+        width: 30%;
+        padding: 10px;
+        height: 100%;
+    }
+
+    .producto_acompañamiento img{
+        height: 60%;
+    }
 }
