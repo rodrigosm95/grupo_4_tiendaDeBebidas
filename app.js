@@ -14,6 +14,10 @@ app.get('/product_detail', (req, res) => {
     res.sendFile(path.join(__dirname, '/views/product_detail.html'))
 });
 
+app.get('/shopping_cart', (req, res) => {
+    res.sendFile(path.join(__dirname, '/views/shopping_cart.html'))
+});
+
 app.listen(3000, () => {
     console.log('Servidor en linea, en el puerto 3000');
 });
