@@ -162,6 +162,8 @@ header ul {
 .other_products h3{
     display: block;
     width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 .other_products article{
@@ -170,11 +172,42 @@ header ul {
     border-radius: 2%;
     padding: 5%;
     font-size: 15px;
+    margin-bottom: 10px;
+}
+.products_samples{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .other_products img{
     width: 100%;
     border-bottom: dashed 1px black;
+}
+
+@media (min-width: 361px){
+    .main_product{
+        justify-content: space-between;
+    }
+    .main_product img{
+        width: 100px;
+    }
+    .other_products article{
+        width: 30% ;
+        justify-content: space-between;
+        margin: auto;
+        height: 100%;
+        padding: 10px;
+    }
+
+    .other_products img{
+        height: 60%;
+    }
+    .other_products h3{
+        text-align: left;
+    }
+
+
 }
 
 
