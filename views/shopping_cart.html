@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de compras</title>
+    <link rel="stylesheet" href="/css/shopping_cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <section class="top-header">
+            <div class="left-bar">
+                <a href="#" class="hamburger-menu">
+                    <i class="fas fa-bars"></i>
+                </a>
+                <div class="logo">
+                    <img src="/images/logo.jpg" alt="Logo Birritapp">
+                </div>
+            </div>
+            <div class="right-bar">
+                <a href="#" class="my-account-icon">
+                    <i class="fas fa-user-circle"></i>
+                </a>
+                <a class="carrito" href="#">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+            <nav class="my-account">
+                <ul>
+                    <li><a href="#">Registrarse</a></li>
+                    <li><a href="#">Iniciar Sesión</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section class="mid-header">
+            <form action="" class="barra-busqueda" method="get">
+                <input class="search-bar" type="search" placeholder="Buscár productos, categorías, marcas..." autocomplete="off">
+                <button class="search-btn" type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+            <nav class="nav-mid-header">
+                <ul class="left-navbar">
+                    <li><a href="#">Productos</a></li>
+                    <li><a href="#">Promociones</a></li>
+                    <li><a href="#">Prueba</a></li>
+                    <li><a href="#">Prueba</a></li>
+                    <li><a href="#">Prueba</a></li>
+                    <li><a href="#">Prueba</a></li>
+                    <li><a href="#">Prueba</a></li>
+                    <li><a href="#">Prueba</a></li>
+                </ul>
+                <ul class="right-navbar">
+                    <li>
+                        <a class="carrito" href="#">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+    <main>
+        <section class="shopping_cart">
+            <section class="price_detail">
+                <section class="product_detail">
+                    <article class="product">
+                        <div class="main_product">
+                            <img src="/images/botella_roberto_cavalli.jpg" alt="">
+                            <H3>Vodka Roberto Cavalli</H3>
+                        </div>
+                        <p>cantidad: 1</p>
+                        <div class="price">
+                            <p>Precio por unidad:</p>
+                            <p>$30.000</p>
+                        </div>
+                        <div class="price">
+                            <p>Precio total:</p>
+                            <p>$30.000</p>
+                        </div>
+                    </article>
+                    <article class="product">
+                        <div class="main_product">
+                            <img src="/images/red_bull.jpg" alt="">
+                            <H3>Lata Red Bull</H3>
+                        </div>
+                        <p>cantidad: 6</p>
+                        <div class="price">
+                            <p>Precio por unidad:</p>
+                            <p>$150</p>
+                        </div>
+                        <div class="price">
+                            <p>Precio total:</p>
+                            <p>$900</p>
+                        </div>
+                    </article>
+                </section>
+                <div class="subtotal">
+                    <p>Subtotal</p>
+                    <p>$30.900</p>
+                </div>
+                <div class="envio">
+                    <div class="send_method">
+                        <p>Envio</p>
+                        <form>
+                            <input type="radio" name="envio" id="sucursal">
+                            <label for="sucursal">Retiro en sucursal</label><br>
+                            <input type="radio" name="envio" id="domicilio">
+                            <label for="domicilio">Envio a domicilio</label>
+                        </form>
+                    </div>
+                    <div class="send_price">
+                        <p>$Gratis</p>
+                        <span>precio a acordar</span>
+                    </div>
+                    
+                </div>
+                <div class="total">
+                    <p>TOTAL</p>
+                    <P>$30.000</P>
+                </div>
+            </section>
+            <div class="buttons">
+                <form>
+                    <button type="submit">
+                        <label>Ver mas productos</label>
+                    </button>
+                    <button type="submit">
+                        <label>Continuar Compra</label>
+                    </button>
+                </form>
+            </div>
+        </section>
+        <section class="other_products">
+            <h3>Productos que podrian interesarte</h3>
+            <div class="products_samples">
+                <article class="recommended_product">
+                    <img src="/images/botella_bulldog.jpg" alt="">
+                    <h4>Gin Bulldog</h4>
+                    <p>$3.500</p>
+                </article>
+                <article class="recommended_product">
+                    <img src="/images/botella_johnnie_walker_greenlabel.jpg" alt="">
+                    <h4>Whiskey Johnnie Walker Greenlabel</h4>
+                    <p>$11.500</p>
+                </article>
+                <article class="recommended_product">
+                    <img src="/images/botella_moet_chandon.jpg" alt="">
+                    <h4>Champagne Moet Chandon</h4>
+                    <p>$7.000</p>
+                </article>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

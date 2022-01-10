@@ -155,6 +155,7 @@ header ul {
 
 .producto_acompañamiento img{
     width: 100%;
+    border-bottom: dashed 1px black;
 }
 
 .producto_acompañamiento{
@@ -176,6 +177,7 @@ header ul {
 
     .acompañamientos h3{
         margin-bottom: 10px;
+        text-align: left;
     }
 
     .producto_acompañamiento{
