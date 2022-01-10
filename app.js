@@ -7,9 +7,9 @@ const publicPath = path.resolve(__dirname, './public');
 app.use(express.static(publicPath));
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '/views/home.html'))
+    res.sendFile(path.join(__dirname, '/views/index.html'))
 });
 
-app.listen(3000, () => {
-    console.log('Servidor en linea, en el puerto 3000');
+app.listen(3030, () => {
+    console.log('Servidor en linea, en el puerto 3030');
 });
