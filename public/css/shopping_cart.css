@@ -7,6 +7,7 @@
 body {
     max-width: 1200px;
     height: 100vh;
+    font-size: 20px;
 }
 
 header {
@@ -83,3 +84,101 @@ header ul {
     align-items: center;
     height: 30px;
 }
+
+.shopping_cart{
+    box-shadow: 0px 0px 10px rgb(100 100 100);
+    margin: 10px;
+    border: solid 2px rgb(100 100 100);
+    max-width: 100%;
+}
+
+.price_detail{
+    padding: 10px;
+}
+.price_detail p{
+    margin: 5px 0px;
+}
+.product_detail{
+    border-bottom: solid 1px black;
+}
+.main_product{
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: dashed 1px black;
+}
+
+.main_product h3{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.main_product img{
+    width: 40%;
+    height: 150px;
+}
+.price{
+    display: flex;
+    justify-content: space-between;
+}
+
+.subtotal, .envio, .total{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px black;
+}
+
+.send_method{
+    width: 70%;
+}
+
+.send_price{
+    width: 30%;
+    text-align: end;
+}
+
+.send_price span{
+    color: red;
+    font-size: 10px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.other_products{
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0px 0px 10px rgb(100 100 100);
+    margin: 10px;
+    border: solid 2px rgb(100 100 100);
+    max-width: 100%;
+    padding: 10px;
+    justify-content: center;
+}
+
+.other_products h3{
+    display: block;
+    width: 100%;
+}
+
+.other_products article{
+    width: 70%;
+    border: solid 2px black;
+    border-radius: 2%;
+    padding: 5%;
+    font-size: 15px;
+}
+
+.other_products img{
+    width: 100%;
+    border-bottom: dashed 1px black;
+}
+
+
+
+
+
+

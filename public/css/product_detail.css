@@ -155,6 +155,7 @@ header ul {
 
 .producto_acompañamiento img{
     width: 100%;
+    border-bottom: dashed 1px black;
 }
 
 .producto_acompañamiento{

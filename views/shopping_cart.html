@@ -63,37 +63,65 @@
         </section>
     </header>
     <main>
-        <div class="shopping_cart">
-            <div class="price_detail">
-                <div class="product_detail">
-                    <div class="main_product">
-                        <img src="/images/botella_roberto_cavalli.jpg" alt="">
-                        <H3>Vodka Roberto Cavalli</H3>
-                    </div>
-                    <p>cantidad: 1</p>
-                    <p>Precio por unidad: $30.000</p>
-                    <p>Precio total: $30.000</p>
-                </div>
+        <section class="shopping_cart">
+            <section class="price_detail">
+                <section class="product_detail">
+                    <article class="product">
+                        <div class="main_product">
+                            <img src="/images/botella_roberto_cavalli.jpg" alt="">
+                            <H3>Vodka Roberto Cavalli</H3>
+                        </div>
+                        <p>cantidad: 1</p>
+                        <div class="price">
+                            <p>Precio por unidad:</p>
+                            <p>$30.000</p>
+                        </div>
+                        <div class="price">
+                            <p>Precio total:</p>
+                            <p>$30.000</p>
+                        </div>
+                    </article>
+                    <article class="product">
+                        <div class="main_product">
+                            <img src="/images/red_bull.jpg" alt="">
+                            <H3>Lata Red Bull</H3>
+                        </div>
+                        <p>cantidad: 6</p>
+                        <div class="price">
+                            <p>Precio por unidad:</p>
+                            <p>$150</p>
+                        </div>
+                        <div class="price">
+                            <p>Precio total:</p>
+                            <p>$900</p>
+                        </div>
+                    </article>
+                </section>
                 <div class="subtotal">
                     <p>Subtotal</p>
-                    <p>$30.000</p>
+                    <p>$30.900</p>
                 </div>
                 <div class="envio">
-                    <p>Envio</p>
-                    <form>
-                        <input type="radio" name="envio" id="sucursal">
-                        <label for="sucursal">Retiro en sucursal</label>
-                        <input type="radio" name="envio" id="domicilio">
-                        <label for="domicilio">Envio a domicilio</label>
-                    </form>
-                    <p>Gratis</p>
-                    <span>precio a acordar</span>
+                    <div class="send_method">
+                        <p>Envio</p>
+                        <form>
+                            <input type="radio" name="envio" id="sucursal">
+                            <label for="sucursal">Retiro en sucursal</label><br>
+                            <input type="radio" name="envio" id="domicilio">
+                            <label for="domicilio">Envio a domicilio</label>
+                        </form>
+                    </div>
+                    <div class="send_price">
+                        <p>$Gratis</p>
+                        <span>precio a acordar</span>
+                    </div>
+                    
                 </div>
                 <div class="total">
                     <p>TOTAL</p>
                     <P>$30.000</P>
                 </div>
-            </div>
+            </section>
             <div class="buttons">
                 <form>
                     <button type="submit">
@@ -104,10 +132,25 @@
                     </button>
                 </form>
             </div>
-        </div>
-        <div class="other_products">
-            <div class="recommended_product"></div>
-        </div>
+        </section>
+        <section class="other_products">
+            <h3>Productos que podrian interesarte</h3>
+            <article class="recommended_product">
+                <img src="/images/botella_bulldog.jpg" alt="">
+                <h4>Gin Bulldog</h4>
+                <p>$3.500</p>
+            </article>
+            <article class="recommended_product">
+                <img src="/images/botella_johnnie_walker_greenlabel.jpg" alt="">
+                <h4>Whiskey Johnnie Walker Greenlabel</h4>
+                <p>$11.500</p>
+            </article>
+            <article class="recommended_product">
+                <img src="/images/botella_moet_chandon.jpg" alt="">
+                <h4>Champagne Moet Chandon</h4>
+                <p>$7.000</p>
+            </article>
+        </section>
     </main>
 </body>
 </html>
