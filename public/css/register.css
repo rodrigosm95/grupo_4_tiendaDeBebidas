@@ -1,0 +1,120 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box; 
+}
+body {
+    max-width: 1200px;
+    height: 100vh;
+}
+
+header {
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+.hamburger-menu {
+    display: flex;
+    align-items: center;
+    color: white;
+    max-width: 20px;
+    font-size: 18px;
+    position: relative;
+    left: 5%;
+}
+
+.my-account-icon,
+.carrito {
+    color: white;
+    font-size: 18px;
+}
+
+.my-account-icon {
+    position: relative;
+    left: 60%;
+}
+
+.carrito {
+    position: relative;
+    right: 5%;
+}
+
+.logo>img {
+    width: 10vw;
+}
+
+header ul {
+    margin: 0;
+    padding: 0;
+}
+
+.my-account,
+.left-navbar,
+.right-navbar {
+    display: none;
+}
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-bar,
+.right-bar {
+    display: flex;
+}
+
+.left-bar {
+    justify-content: space-between;
+    width: 55%
+}
+
+.right-bar {
+    justify-content: space-between;
+    width: 45%
+}
+
+.barra-busqueda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+}
+
+.search-btn {}
+
+.form-register {
+    background-color: black;
+    width: 100%;
+    height: auto;
+    background: 0px;
+    margin: auto;
+}
+
+.form-register h1 {
+    margin: 0;
+    text-align: center;
+    height: auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    border: 1px solid;
+    font-size: 20px;
+}
+
+.controls {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 11px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #c0c0c0;  
+}
+.buttons {
+    width: 100%;
+    height: auto;
+    border: grey;
+    color: none;
+    margin-bottom: 16px;
+}
