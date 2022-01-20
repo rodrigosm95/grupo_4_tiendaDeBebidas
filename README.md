@@ -22,7 +22,7 @@ ACERCA DE NOSOTROS
 
 Rodrigo San Martin: tengo 26 años, soy abogado y trabajo en dos estudios diferentes, uno de ellos, de origen familiar.<br>
 Julian Martinez Nuñez: tengo 25 años, llevo ya varios años moviendome por el mundo de la programacion, en diversas instituciones y desde diferentes opticas. Quiero usar esta oportunidad para por fin entrar laboralmente a este hermoso mundo que es el desarrollo de software, me siento mas listo que nunca.<br>
-Nicolás Cortés Galvis: 22 años, estudiante de tecnicatura universitaria en utn resistencia, comenzando a aprender sobre el mundo del desarrollo web desde 2020.
+Nicolás Cortés Galvis: 22 años, estudiante de tecnicatura universitaria en utn resistencia, comenzando a aprender sobre el mundo del desarrollo web desde 2020.<br>
 Franco Santa Cruz: Tengo 22 años, curso actualmente Ingenieria en Sistemas de Información en la UTN Resistencia, con cierta experiencia en la programación con Java y en empresas como Cisco (CCNA 1 y 2), totalmente motivado en expandir mis limites con este curso.
 
 SITIOS DE REFERENCIA
