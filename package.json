@@ -4,9 +4,8 @@
     "description": "¿Qué productos o servicios brindará nuestro sitio?\r -------------------------------------------------------------------------------------------------\r 1)\tVenta mayorista y minorista de bebidas.\r 2)\tVenta de snacks que sirvan de acompañamientos a las bebidas.\r 3)\tVenta de accesorios de bebidas y cockteleria.\r 4)\tServicio de barra para eventos.",
     "main": "app.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "dev": "nodemon app.js -e js,mjs,json,html,css",
-        "start": "node app.js"
+        "test": "clear && nodemon src/app.js -e mjs,js,json,ejs,css",
+        "start": "node src/app.js"
     },
     "repository": {
         "type": "git",
@@ -19,6 +18,7 @@
     },
     "homepage": "https://github.com/rodrigosm95/grupo_4_tiendaDeBebidas#readme",
     "dependencies": {
+        "ejs": "^3.1.6",
         "express": "^4.17.2"
     },
     "devDependencies": {
