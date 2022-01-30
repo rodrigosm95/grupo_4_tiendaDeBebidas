@@ -2,13 +2,14 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crear un Producto</title>
+    <%- include("../partial/head") %> 
+    <title>Actualizar producto</title>
 </head>
 
 <body>
+    <header>
+        <%- include("../partial/header") %> 
+    </header>
     <h1>Actualizar un Producto</h1>
     <form action="/products/actualizar?m=PUT" method="post">
         <input type="hidden" name="id" value="<%= producto.id %> ">
@@ -32,6 +33,9 @@
             <button type="submit">Guardar</button>
         </fieldset>
     </form>
+    <footer>
+        <%- include("../partial/footer") %> 
+    </footer>
 </body>
 
 </html>
