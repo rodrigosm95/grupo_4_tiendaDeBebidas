@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8">
     <title>Ingreso de sesión</title>
-    <link rel="stylesheet" href="/css/login.css"">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width", initial-scale=1.0">
+    <link rel="stylesheet" href="/css/login.css"">
 </head>
 <body>
 <header>
@@ -62,29 +62,72 @@
         </nav>
     </section>
 </header>
-<form action ="login.html">
-    <section class="form-login">
-    <h1>
-        BIENVENIDOS!
-    </h1>
-    <ul>
-        <div>
-            <input class="controls" type="email" name="email" placeholder="Correo electrónico">
-        </div>
-        <div>
+    <div class="form-login">
+        <form action ="login.ejs" method="post">
+             <h1>
+                ¡BIENVENIDOS!
+            </h1>
+            <p>
+                <input class="controls" type="email" name="email" placeholder="Correo electrónico">
+            </p>
+                
+            <p>
                 <input class="controls" type="password" name="pass" placeholder="Contraseña">
+            </p>
+                
+            <p>
+                <a href="#">Olvidaste la contraseña?</a>
+            </p>
+            <p>
+                <button type="submit " class="button">Ingresar</button>
+            </p>
+                
+            <p>
+                <button class="buttons" type="buttons">No tienes cuenta? Regístrate!</button>
+            </p>
+
+            <p>
+                <button class= "buttons" type="buttons">Ingresar como invitado</button>
+            </p>
+        </form>
+    </div>
+    <footer>
+        <div class="footer-logo">
+            <img src="/images/Beer Mug Free SVG Cut File.png" alt="Logo">
         </div>
-        <div>
-            <button class="buttons" type="submit">Ingresar</button>
+        <nav class="enlaces-footer">
+            <ul>
+                <li class="enlace">
+                    <a href="">
+                        <p>Mi Cuenta</p>
+                    </a>
+                </li>
+                <li class="enlace">
+                    <a href="">
+                        <p>Carrito</p>
+                    </a>
+                </li>
+                <li class="enlace">
+                    <a href="">
+                        <p>Productos</p>
+                    </a>
+                </li>
+                <li class="enlace">
+                    <a href="">
+                        <p>Ofertas</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="iconos-footer">
+            <a href="#">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#">
+                <i class="fab fa-facebook-square"></i>
+            </a>
         </div>
-        <div>
-            <button class="buttons" type="button">No tienes cuenta? Regístrate</button>
-        </div>
-        <div>
-            <button class= "buttons" type="button">Ingresar como invitado</button>
-        </div>
-    </ul>
-    </section>
-</form>
+        <p class="copyright">Copyright © 2022 Birritapp</p>
+    </footer>
 </body>
 </html>

@@ -18,10 +18,10 @@
   },
   "homepage": "https://github.com/rodrigosm95/grupo_4_tiendaDeBebidas#readme",
   "dependencies": {
-    "ejs": "^3.1.6",
     "express": "^4.17.2"
   },
   "devDependencies": {
+    "ejs": "^3.1.6",
     "nodemon": "^2.0.15"
   }
 }

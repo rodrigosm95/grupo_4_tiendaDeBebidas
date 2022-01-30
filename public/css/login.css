@@ -7,6 +7,7 @@
 body {
     max-width: 1200px;
     height: 100vh;
+    background-color: #f0ebd8;
 }
 
 header {
@@ -86,37 +87,126 @@ header ul {
 
 .search-btn {}
 
-.form-login {
-    background-color: black;
+.form-login{
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
-    height: auto;
-    background: 0px;
-    margin: auto;
+    margin: 10% auto;
+    opacity: 80%;
+    padding: 30px 33px 67px;
+    border:2px #f0ebd8 solid;
+    align-items: center;
+    justify-content: center;
+    opacity: 90%;
+    background-color: transparent;
 }
-
 .form-login h1 {
-    margin: 0;
+    color: #FCA311;
+    background-color: #0d1321;
     text-align: center;
-    height: auto;
-    margin-bottom: 30px;
-    margin-top: 30px;
-    border: 1px solid;
-    font-size: 20px;
+    margin: auto;
+    width: 100%;
+    font-size: 100%;
+    padding: 2%;
+}
+.form-login a{
+    text-align: left;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 90%;
+    margin: auto;
+    padding: 2%;
 }
 
 .controls{
-    width: 100%;
-    margin-bottom: 15px;
-    padding: 11px 10px;
+    text-align: center;
+    width: 95%;
+    margin: 2%;
+    padding: 2%;
+    border: 2px #14213D solid;
     font-size: 14px;
-    font-weight: bold;
-    background-color: #c0c0c0;
+    background-color: #f0ebd8;
+    color: #FCA311;
+}
+
+.controls:focus{
+    color: lightblue;
+    background-color: black;
+}
+
+.button{
+    width:95%;
+    border: 2px #14213D solid;
+    background-color: #f0ebd8;
+    color: #3e5c76;
+    margin: 2%;
+    padding: 2%;
+}
+.button:hover{
+    color: #ffffff;
+    background-color: #748cab;
 }
 
 .buttons{
-    width: 100%;
-    height: 40px;
-    border: grey;
-    color: none;
-    margin-bottom: 16px;
+    width: 95%;
+    border: 2px #f0ebd8;
+    background-color: #f0ebd8;
+    color: #3e5c76;
+    margin: 2%;
+    padding: 2%;
 }
+
+.buttons:hover{
+    color: #ffffff;
+    background-color: #748cab;
+}
+
+
+.footer-logo {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-logo img {
+    width: 25%;
+    height: auto;
+    position: relative;
+    top: 15px;
+}
+
+.enlaces-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.enlaces-footer ul {
+    padding: 0;
+    text-align: center;
+}
+
+.enlace p {
+    color: #444;
+    padding: 5px 0 5px 0;
+}
+
+.iconos-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.iconos-footer a {
+    padding: 5px;
+    color: #444;
+}
+
+.copyright {
+    text-align: center;
+    color: #444;
+    padding-top: 10px;
+}
+
+@media (min-widht: 361px) {}
+
+@media (min-widht: 765px) {}
+
+@media (min-width: 1280px){}
