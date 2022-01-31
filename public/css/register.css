@@ -87,9 +87,14 @@ header ul {
 .search-btn {}
 
 .form-register {
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
-    align-self: center;
+    margin: 10% auto;
+    padding: auto;
+    align-items: center;
     justify-content: center;
+    opacity: 90%;
     background-color: transparent;
 }
 
@@ -100,7 +105,7 @@ header ul {
     margin: auto;
     width: 100%;
     font-size: 100%;
-    padding: 10%;
+    padding: 2%;
 }
 
 .controls {
@@ -133,7 +138,8 @@ header ul {
 }
 
 .buttons {
-    width: 95%;
+    display: flex;
+    width: 45%;
     border: 2px #14213D solid;
     background-color: #f0ebd8;
     color: #3e5c76;

@@ -91,10 +91,8 @@ header ul {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    margin: 10% auto;
-    opacity: 80%;
-    padding: 30px 33px 67px;
-    border:2px #f0ebd8 solid;
+    margin: 10% 0%;
+    padding: auto;
     align-items: center;
     justify-content: center;
     opacity: 90%;
@@ -110,12 +108,16 @@ header ul {
     padding: 2%;
 }
 .form-login a{
+    display: flex;
     text-align: left;
-    color: #ffffff;
+    color: #0a027e;
     font-family: Arial;
-    font-size: 90%;
+    font-size: 70%;
     margin: auto;
+    margin-left: 0;
     padding: 2%;
+    width: 80%;
+    justify-content: left;
 }
 
 .controls{
@@ -137,7 +139,7 @@ header ul {
 .button{
     width:95%;
     border: 2px #14213D solid;
-    background-color: #f0ebd8;
+    background-color: #ffffff;
     color: #3e5c76;
     margin: 2%;
     padding: 2%;
@@ -149,8 +151,8 @@ header ul {
 
 .buttons{
     width: 95%;
-    border: 2px #f0ebd8;
-    background-color: #f0ebd8;
+    border: 2px #14213D solid;
+    background-color: #FCA311;
     color: #3e5c76;
     margin: 2%;
     padding: 2%;
