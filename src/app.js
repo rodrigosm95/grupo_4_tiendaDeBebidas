@@ -15,7 +15,6 @@ app.use(express.static(resolve(__dirname, '../uploads')));
 
 app.use(require('./routes/main'));
 app.use(require('./routes/register'));
-
 app.use(require('./routes/login'));
 app.use(require('./routes/cart'));
 app.use(require('./routes/product_detail.js'));
