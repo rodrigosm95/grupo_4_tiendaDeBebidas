@@ -1,63 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%- include("../partial/head") %> 
+  <%- include("../partial/head") %>
 </head>
 <body>
-    <header>
-        <%- include("../partial/header") %> 
+<header>
+  <%- include("../partial/header") %>
 </header>
-<form action="register.html">
-    <section class="form-register">
-        <h1>
-            REGISTRO DE USUARIOS
-        </h1>
-        <ul>
-            <p>
-                <input class="controls" type="text" name="nombre" placeholder="Nombre y Apellido">
-            </p>
-            <p>
-                <input class="controls" type="text" name="address"  placeholder="Dirección">
-            </p>
-            <p>
-                <input class="controls" type="text" name="location" placeholder="Localidad">
-            </p>
-            <p>
-                <input class="controls" type="text" name="province" placeholder="Provincia">
-            </p>
-            <p>
-                <input class="controls" type="email" name="email" placeholder="Correo electrónico">
-            </p>
-            <p>
+        <div class="form-register">
+            <form action="register.ejs" method="post">
+                <h1>
+                    REGISTRO DE USUARIOS
+                </h1>
+
+                <p>
+                    <input class="controls" type="text" name="nombre" placeholder="Nombre y Apellido">
+                </p>
+                
+                <p>
+                    <input class="controls" type="text" name="address"  placeholder="Dirección">
+                </p>
+                
+                <p>
+                    <input class="controls" type="text" name="location" placeholder="Localidad">
+                </p>
+                
+                <p>
+                    <input class="controls" type="text" name="province" placeholder="Provincia">
+                </p>
+                
+                <p>
+                    <input class="controls" type="email" name="email" placeholder="Correo electrónico">
+                </p>
+                
+                <p>
                     <input class="controls" type="password" name="pass" placeholder="Contraseña">
-            </p>
-        </ul>
-        </section>
-        <section class="buttons">
-        <ul>
-            <p>
-                <label for="terminos">
-                    Soy mayor de 18 años.
-                </label>
-                <input type="checkbox" name="edad">
-            </p>
-            <p>
-                <label for="politicas">
-                    Acepto las políticas de privacidad.
-                </label>
-                <input type="checkbox" name="politicas">
-            </p>
-            <p>
-                <label for="promociones">
-                    Quiero recibir promociones y novedades por correo electrónico.
-                </label>
-                <input type="checkbox" name="notificaciones">
-            </p>
-        </ul>
-        </section>
-</form>
-<footer>
-    <%- include("../partial/footer") %> >
-</footer>
+                </p>
+
+                <section class="check">
+                    <p>
+                        <label for="terminos">Soy mayor de 18 años.</label>
+                        <input type="checkbox" name="edad">
+                    </p>
+                    <p>
+                        <label for="politicas">Acepto las políticas de privacidad.</label>
+                        <input type="checkbox" name="politicas">
+                    </p>
+                    <p>
+                        <label for="promociones">Quiero recibir promociones y novedades por correo electrónico.</label>
+                        <input type="checkbox" name="notificaciones">
+                    </p>
+                    <p>
+                        <label for="fecha">Ingrese su fecha de nacimiento: </label>
+                        <input type="date" name="fecha" id="fecha" min="2004-01-01">
+                    </p>
+                </section>
+                    <p>
+                        <input class="buttons" type="reset" value="Borrar todo">
+                        <input class="buttons" type="submit" value="Registrarse">
+                    </p>
+            </form>
+        </div>
+        <footer>
+          <%- include("../partial/footer") %> >
+        </footer>
 </body>
-</html>
+</html> 
