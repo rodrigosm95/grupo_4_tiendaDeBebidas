@@ -33,5 +33,19 @@
     "description": "Jugo Ades en Caja 350ml",
     "price": "80",
     "stock": "100"
+  },
+  {
+    "id": 6,
+    "name": "Birra",
+    "description": "Brahma papa ",
+    "price": "20",
+    "stock": "61"
+  },
+  {
+    "id": 7,
+    "name": "Vino",
+    "description": "Toro ",
+    "price": "10000",
+    "stock": "4"
   }
 ]
