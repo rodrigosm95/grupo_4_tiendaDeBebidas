@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Patagonia 500ml",
+    "description": "Lata Cerveza Patagonia 500ml",
+    "price": "60",
+    "stock": "100"
+  },
+  {
+    "id": 2,
+    "name": "Segundo Producto",
+    "description": "2do Producto",
+    "price": 222,
+    "stock": 9
+  },
+  {
+    "id": 3,
+    "name": "Heineken 300ml",
+    "description": "Lata Cerveza Heineken",
+    "price": 120,
+    "stock": 100
+  },
+  {
+    "id": 4,
+    "name": "Procuto 4",
+    "description": "4to Producto",
+    "price": 444,
+    "stock": 1
+  },
+  {
+    "id": 5,
+    "name": "Ades 350ml",
+    "description": "Jugo Ades en Caja 350ml",
+    "price": "80",
+    "stock": "100"
+  }
+]

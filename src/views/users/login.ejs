@@ -1,66 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-    <meta charset="utf-8">
+    <%- include("../partial/head") %> 
     <title>Ingreso de sesión</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width", initial-scale=1.0">
-    <link rel="stylesheet" href="/css/login.css"">
 </head>
 <body>
 <header>
-    <section class="top-header">
-        <div class="left-bar">
-            <a href="#" class="hamburger-menu">
-                <i class="fas fa-bars"></i>
-            </a>
-            <div class="logo">
-                <img src="/images/Beer Mug Free SVG Cut File.png" alt="Logo Birritapp">
-            </div>
-        </div>
-        <div class="right-bar">
-            <a href="#" class="my-account-icon">
-                <i class="fas fa-user-circle"></i>
-            </a>
-            <a class="carrito" href="#">
-                <i class="fas fa-shopping-cart"></i>
-            </a>
-        </div>
-        <nav class="my-account">
-            <ul>
-                <li><a href="#">Registrarse</a></li>
-                <li><a href="#">Iniciar Sesión</a></li>
-            </ul>
-        </nav>
-
-    </section>
-    <section class="mid-header">
-        <form action="" class="barra-busqueda" method="get">
-            <input class="search-bar" type="search" placeholder="Buscár productos, categorías, marcas..." autocomplete="off">
-            <button class="search-btn" type="submit">
-                <i class="fas fa-search"></i>
-            </button>
-        </form>
-        <nav class="nav-mid-header">
-            <ul class="left-navbar">
-                <li><a href="#">Productos</a></li>
-                <li><a href="#">Promociones</a></li>
-                <li><a href="#">Prueba</a></li>
-                <li><a href="#">Prueba</a></li>
-                <li><a href="#">Prueba</a></li>
-                <li><a href="#">Prueba</a></li>
-                <li><a href="#">Prueba</a></li>
-                <li><a href="#">Prueba</a></li>
-            </ul>
-            <ul class="right-navbar">
-                <li>
-                    <a class="carrito" href="#">
-                        <i class="fas fa-shopping-cart"></i>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </section>
+    <%- include("../partial/header") %> 
 </header>
     <div class="form-login">
         <form action ="login.ejs" method="post">
@@ -91,43 +37,8 @@
             </p>
         </form>
     </div>
-    <footer>
-        <div class="footer-logo">
-            <img src="/images/Beer Mug Free SVG Cut File.png" alt="Logo">
-        </div>
-        <nav class="enlaces-footer">
-            <ul>
-                <li class="enlace">
-                    <a href="">
-                        <p>Mi Cuenta</p>
-                    </a>
-                </li>
-                <li class="enlace">
-                    <a href="">
-                        <p>Carrito</p>
-                    </a>
-                </li>
-                <li class="enlace">
-                    <a href="">
-                        <p>Productos</p>
-                    </a>
-                </li>
-                <li class="enlace">
-                    <a href="">
-                        <p>Ofertas</p>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <div class="iconos-footer">
-            <a href="#">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="#">
-                <i class="fab fa-facebook-square"></i>
-            </a>
-        </div>
-        <p class="copyright">Copyright © 2022 Birritapp</p>
-    </footer>
+<footer>
+    <%- include("../partial/footer") %> >
+</footer>
 </body>
 </html>

@@ -2,70 +2,13 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <%- include("../partial/head") %>
+    <title>Home</title> 
 </head>
 
 <body>
     <header>
-        <section class="top-header">
-            <div class="top-left-bar">
-                <a href="#" class="hamburger-menu">
-                    <i class="fas fa-bars"></i>
-                </a>
-                <div class="logo">
-                    <img src="/images/Beer Mug Free SVG Cut File.png" alt="Logo Birritapp">
-                </div>
-            </div>
-            <div class="top-right-bar">
-                <a href="#" class="my-account-icon">
-                    <i class="fas fa-user-circle"></i>
-                </a>
-                <a class="carrito" href="#">
-                    <i class="fas fa-shopping-cart"></i>
-                </a>
-            </div>
-            <nav class="my-account">
-                <ul>
-                    <li><a href="#">Registrarse</a></li>
-                    <li><a href="#">Iniciar Sesión</a></li>
-                </ul>
-            </nav>
-        </section>
-        <section class="mid-header">
-            <form action="" class="barra-busqueda" method="get">
-                <input class="search-bar" type="search" placeholder="Buscár productos, categorías, marcas..." autocomplete="off">
-                <button class="search-btn" type="submit">
-                    <i class="fas fa-search"></i>
-                </button>
-            </form>
-            <nav class="nav-mid-header">
-                <ul class="left-mid-navbar">
-                    <li><a href="#">Productos</a></li>
-                    <li><a href="#">Promociones</a></li>
-                    <li><a href="#">Prueba</a></li>
-                    <li><a href="#">Prueba</a></li>
-                    <li><a href="#">Prueba</a></li>
-                    <li><a href="#">Prueba</a></li>
-                    <li><a href="#">Prueba</a></li>
-                    <li><a href="#">Prueba</a></li>
-                </ul>
-                <ul class="right-mid-navbar">
-                    <li>
-                        <a class="carrito" href="#">
-                            <i class="fas fa-shopping-cart"></i>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </section>
+        <%- include("../partial/header") %> 
     </header>
     <section class="banner">
         <img src="https://pbs.twimg.com/media/EJYbz_tXYAAZMk-.png" alt="ofertas">
@@ -140,42 +83,7 @@
         </section>
     </main>
     <footer>
-        <div class="footer-logo">
-            <img src="/images/Beer Mug Free SVG Cut File.png" alt="Logo">
-        </div>
-        <nav class="enlaces-footer">
-            <ul>
-                <li class="enlace">
-                    <a href="">
-                        <p>Mi Cuenta</p>
-                    </a>
-                </li>
-                <li class="enlace">
-                    <a href="">
-                        <p>Carrito</p>
-                    </a>
-                </li>
-                <li class="enlace">
-                    <a href="">
-                        <p>Productos</p>
-                    </a>
-                </li>
-                <li class="enlace">
-                    <a href="">
-                        <p>Ofertas</p>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <div class="iconos-footer">
-            <a href="#">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="#">
-                <i class="fab fa-facebook-square"></i>
-            </a>
-        </div>
-        <p class="copyright">Copyright © 2022 Birritapp</p>
+        <%- include("../partial/footer") %> >
     </footer>
 </body>
 
