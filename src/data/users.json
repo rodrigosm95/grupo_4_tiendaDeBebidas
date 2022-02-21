@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "name": "Franco Santa Cruz",
+    "address": "av. 25 de mayo 600",
+    "province": "Chaco",
+    "location": "Resistencia",
+    "email": "sczfranco@gmail.com",
+    "pass": "341243",
+    "legalAge": "Si mayor de edad",
+    "politicas": "Si politicas",
+    "notificaciones": []
+  },
+  {
+    "id": 2,
+    "name": "Probando Imagenes",
+    "address": "Direccion",
+    "province": "Provincia ",
+    "location": "Local",
+    "email": "correo@correo.com",
+    "pass": "123123123",
+    "category": "user",
+    "image": "user-1645299195586.jpg",
+    "legalAge": "Si mayor de edad",
+    "politicas": [],
+    "notificaciones": "Si promociones"
+  },
+  {
+    "id": 3,
+    "name": "Probando Sin Imagen",
+    "address": "Direc",
+    "province": "Prov",
+    "location": "Local",
+    "email": "Corr@correo",
+    "pass": "123123",
+    "category": "user",
+    "legalAge": "Si mayor de edad",
+    "politicas": [],
+    "notificaciones": "Si promociones"
+  }
+]

@@ -32,6 +32,9 @@
             <button type="submit">Guardar</button>
         </fieldset>
     </form>
+    <form method="POST" action="/products/delete/<%= producto.id %>?m=DELETE">
+        <button type="submit">Borrar producto</button>
+    </form>
 </body>
 
 </html>

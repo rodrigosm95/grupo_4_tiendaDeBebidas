@@ -8,25 +8,25 @@
   <%- include("../partial/header") %>
 </header>
         <div class="form-register">
-            <form action="register.ejs" method="post">
+            <form action="/register/guardar" method="post" enctype="multipart/form-data">
                 <h1>
                     REGISTRO DE USUARIOS
                 </h1>
-
+                
                 <p>
-                    <input class="controls" type="text" name="nombre" placeholder="Nombre y Apellido">
+                    <input class="controls" type="text" name="name" placeholder="Nombre y Apellido">
                 </p>
                 
                 <p>
                     <input class="controls" type="text" name="address"  placeholder="Dirección">
                 </p>
-                
+
                 <p>
-                    <input class="controls" type="text" name="location" placeholder="Localidad">
+                    <input class="controls" type="text" name="province" placeholder="Provincia">
                 </p>
                 
                 <p>
-                    <input class="controls" type="text" name="province" placeholder="Provincia">
+                    <input class="controls" type="text" name="location" placeholder="Localidad">
                 </p>
                 
                 <p>
@@ -37,22 +37,22 @@
                     <input class="controls" type="password" name="pass" placeholder="Contraseña">
                 </p>
 
+                <p>
+                    <input class="controls" type="file" name="FotoPerfil" placeholder="Foto de perfil">
+                </p>
+
                 <section class="check">
                     <p>
                         <label for="terminos">Soy mayor de 18 años.</label>
-                        <input type="checkbox" name="edad">
+                        <input type="checkbox" name="legalAge" value="Si mayor de edad" id="terminos">
                     </p>
                     <p>
                         <label for="politicas">Acepto las políticas de privacidad.</label>
-                        <input type="checkbox" name="politicas">
+                        <input type="checkbox" name="politicas" value="Si politicas" id="politicas">
                     </p>
                     <p>
                         <label for="promociones">Quiero recibir promociones y novedades por correo electrónico.</label>
-                        <input type="checkbox" name="notificaciones">
-                    </p>
-                    <p>
-                        <label for="fecha">Ingrese su fecha de nacimiento: </label>
-                        <input type="date" name="fecha" id="fecha" min="2004-01-01">
+                        <input type="checkbox" name="notificaciones" value="Si promociones" id="promociones">
                     </p>
                 </section>
                     <p>

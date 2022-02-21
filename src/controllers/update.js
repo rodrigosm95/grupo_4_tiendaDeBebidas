@@ -1,4 +1,5 @@
-const { match, list, write } = require("../models/product");
+const model = require("../models/product");
+const { match, list, write, remove } = require("../models/product");
 
 const controller = {
     update: (req, res) => {
@@ -22,7 +23,9 @@ const controller = {
         })
         write(productos)
         return res.send(req.body)
+    },
+    remove: (req, res) => {
+        res.send("Delete funciona")
     }
 }
-
 module.exports = controller;
