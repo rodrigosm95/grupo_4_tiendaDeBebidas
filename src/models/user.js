@@ -4,7 +4,7 @@ const model = {
     file: resolve(__dirname, "../data", "users.json"),
     read: () => readFileSync(model.file),
     list: () => JSON.parse(model.read()),
-    convert: data => JSON.stringify(data, null, 2), 
+    convert: data => JSON.stringify(data, null, 2),
     write: data => writeFileSync(model.file, model.convert(data)),
     find(id) {
         let rows = this.list();
@@ -21,7 +21,7 @@ const model = {
         email: data.email,
         pass: data.pass,
         category: data.category > 0 ? data.category : "user",
-        image: data.image > 0 ? data.image : [],
+        image: data.image ? data.image : "default.png",
         legalAge: data.legalAge && data.legalAge.length > 0 ? data.legalAge : [],
         politicas: data.politicas && data.politicas.length > 0 ? data.politicas : [],
         notificaciones: data.notificaciones && data.notificaciones.length > 0 ? data.notificaciones : [],
