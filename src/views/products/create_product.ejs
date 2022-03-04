@@ -11,7 +11,7 @@
         <%- include("../partial/header") %> 
     </header>
     <h1>Crear un Producto</h1>
-    <form action="/products/guardar" method="post">
+    <form action="/products/guardar" method="post" enctype="multipart/form-data">
         <fieldset>
             <label for="name">Name</label>
             <input type="text" name="name" id="name" placeholder="Name">
@@ -26,7 +26,12 @@
         </fieldset>
         <fieldset>
             <label for="stock">Stock</label>
-            <input type="range" min="1" max="100" name="stock" id="stock" step="1"></fieldset>
+            <input type="range" min="1" max="100" name="stock" id="stock" step="1">
+        </fieldset>
+        <fieldset>
+            <label for="Image">Imagen</label>
+            <input type="file" name="ProductImage" id="Imagen" placeholder="Imagen">
+        </fieldset>
         <fieldset>
             <button type="submit">Guardar</button>
         </fieldset>

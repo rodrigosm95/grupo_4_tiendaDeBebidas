@@ -22,10 +22,10 @@
   },
   {
     "id": 4,
-    "name": "Procuto 4",
-    "description": "4to Producto",
-    "price": 444,
-    "stock": 1
+    "name": "Heineken",
+    "description": "Lata Heineken",
+    "price": 140,
+    "stock": 1090
   },
   {
     "id": 5,
@@ -47,5 +47,13 @@
     "description": "Toro ",
     "price": "10000",
     "stock": "4"
+  },
+  {
+    "id": 8,
+    "name": "Probando Imagen Producto",
+    "description": "Probando si carga la imagen del producto",
+    "price": 23123,
+    "stock": 18,
+    "ProductImage": []
   }
 ]

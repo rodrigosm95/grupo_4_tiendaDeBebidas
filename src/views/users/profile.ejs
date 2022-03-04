@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("../partial/head") %>
+    <title>Home</title> 
+</head>
+
+<body>
+    <header>
+        <%- include("../partial/header") %> 
+    </header>
+    <section class="banner">
+        <img src="https://pbs.twimg.com/media/EJYbz_tXYAAZMk-.png" alt="ofertas">
+    </section>
+    <main>
+        <article class="card">
+            <div class="card-left">
+                <figure><img src="/images/users/<%= group.image ? group.image : 'default.png' %>" height="100px" width="100px"></figure>
+                <h3>#<%= group.id %></h3>
+            </div>
+            <div class="card-content">
+                <h3><%= group.name %></h3>
+                <p><%= group.address %></p>
+                <p><%= group.province %></p>
+                <p><%= group.location %></p>
+                <p><%= group.email %></p>
+            </div>   
+        </article>
+    </main>
+    <footer>
+        <%- include("../partial/footer") %> >
+    </footer>
+</body>
+
+</html>
