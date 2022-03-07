@@ -8,7 +8,7 @@ const controller = {
         let userToLogin = users.findByField("email", req.body.email)
         if (userToLogin){
             if (userToLogin.pass === req.body.pass) {
-                res.redirect("/")
+                res.redirect("./users/" + userToLogin.id)
             }
             return res.render("./users/login", {
                 errors: {
