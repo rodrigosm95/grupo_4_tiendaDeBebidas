@@ -6,8 +6,8 @@ const model = {
     list: () => JSON.parse(model.read()),
     convert: data => JSON.stringify(data, null, 2),
     write: data => writeFileSync(model.file, model.convert(data)),
-    find(id) {
-        let rows = this.list();
+    find : (id) => {
+        let rows = model.list();
         return rows.find(row => row.id == id)
     },
     filter: (propiedad, valor) => model.all().filter(user => typeof valor !== "string" ? user[propiedad] == valor : user[propiedad].includes(valor)),
@@ -30,7 +30,12 @@ const model = {
         let lista = model.list().sort((a, b) => a.id < b.id ? -1 : a.id > b.id ? 1 : 0)
         lista.push(data);
         model.write(lista);
-    }
+    },
+    findByField : (field, text) => {
+        let allUser = model.list();
+        let userFound = allUser.find(row => row[field] === text)
+        return userFound
+    }        
 }
 
 module.exports = model;
