@@ -1,4 +1,4 @@
-const { generate, create } = require("../models/user");
+const model = require("../models/user");
 
 const controller = {
     index: (req, res) => res.render('./users/register'),
@@ -9,14 +9,14 @@ const controller = {
             let image = req.body;
             image.image = req.file.filename;
 
-            const nuevo = generate(req.body);
-            create(nuevo);
+            const nuevo = model.generate(req.body);
+            model.create(nuevo);
             return res.redirect('/users/' + nuevo.id);
 
         } else {
 
-            const nuevo = generate(req.body);
-            create(nuevo);
+            const nuevo = model.generate(req.body);
+            model.create(nuevo);
             return res.redirect('/users/' + nuevo.id);
         }
 

@@ -9,12 +9,15 @@
     <%- include("../partial/header") %> 
 </header>
     <div class="form-login">
-        <form action ="login.ejs" method="post">
+        <form action ="/login" method="post">
              <h1>
                 ¡BIENVENIDOS!
             </h1>
             <p>
-                <input class="controls" type="email" name="email" placeholder="Correo electrónico">
+                <input class="controls" type="text" name="email" placeholder="Correo electrónico">
+                <% if (locals.errors && errors.email) { %>
+                    <div style="color: red;"><%= errors.email.msg %></div> 
+                <% } %>
             </p>
                 
             <p>
@@ -22,12 +25,12 @@
             </p>
                 
             <p>
-                <a href="#">Olvidaste la contraseña?</a>
-            </p>
-            <p>
                 <button type="submit " class="button">Ingresar</button>
             </p>
-                
+            <p>
+                <a href="#">Olvidaste la contraseña?</a>
+            </p>
+            
             <p>
                 <button class="buttons" type="buttons">No tienes cuenta? Regístrate!</button>
             </p>

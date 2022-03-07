@@ -121,5 +121,19 @@
     "legalAge": "Si mayor de edad",
     "politicas": [],
     "notificaciones": "Si promociones"
+  },
+  {
+    "id": 10,
+    "name": "rodrigo",
+    "address": "calle 123",
+    "province": "chaco",
+    "location": "resistencia",
+    "email": "rodrigo@rodrigo.com",
+    "pass": "123456",
+    "category": "user",
+    "image": "default.png",
+    "legalAge": [],
+    "politicas": [],
+    "notificaciones": []
   }
 ]
