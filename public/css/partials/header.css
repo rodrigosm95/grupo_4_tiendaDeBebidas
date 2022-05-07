@@ -45,13 +45,13 @@
     margin: auto;
 }
 
-.navbars {
+.header-navbars {
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
-.users-navbar {
+.header-users-navbar {
     display: flex;
     width: 35%;
     height: 20%;
@@ -59,12 +59,13 @@
 
 }
 
-.users-navbar a{
+.header-users-navbar a{
     margin: auto;
     text-align: end;
+    color: orange;
 }
 
-.products-navbar {
+.header-products-navbar {
     display: flex;
     width: 35%;
     height: 20%;
@@ -72,9 +73,10 @@
 
 }
 
-.products-navbar a{
+.header-products-navbar a{
     margin: auto;
     text-align: start;
+    color: orange;
 }
 
 
