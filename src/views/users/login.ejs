@@ -5,41 +5,29 @@
     <title>Ingreso de sesión</title>
 </head>
 <body>
-<header>
-    <%- include("../partial/header") %> 
-</header>
-    <div class="form-login">
-        <form action ="/login" method="post">
-             <h1>
-                ¡BIENVENIDOS!
-            </h1>
-            <p>
-                <input class="controls" type="text" name="email" placeholder="Correo electrónico">
-                <% if (locals.errors && errors.email) { %>
+    <header>
+        <%- include("../partial/header") %> 
+    </header>
+    <h1 style="color: black; text-align: center;">¡BIENVENIDOS!</h1>
+    <section class="forms">
+        <form class="form" action ="/login" method="post">
+            <section class="imputs">
+                <input class="imput" type="text" name="email" placeholder="Correo electrónico">
+            <% if (locals.errors && errors.email) { %>
                     <div style="color: red;"><%= errors.email.msg %></div> 
-                <% } %>
-            </p>
-                
-            <p>
-                <input class="controls" type="password" name="pass" placeholder="Contraseña">
-            </p>
-                
-            <p>
-                <button type="submit " class="button">Ingresar</button>
-            </p>
-            <p>
-                <a href="#">Olvidaste la contraseña?</a>
-            </p>
-            
-            <p>
-                <button class="buttons" type="buttons">No tienes cuenta? Regístrate!</button>
-            </p>
+            <% } %>
 
-            <p>
-                <button class= "buttons" type="buttons">Ingresar como invitado</button>
-            </p>
-        </form>
-    </div>
+                <input class="imput" type="password" name="pass" placeholder="Contraseña">
+                <button type="submit">Ingresar</button>
+            </section>                
+    </form>
+    <ul>
+        <li>
+            <a href="#">Olvidaste la contraseña?</a>
+            <a href="/register">No tienes cuenta? Regístrate!</button></a>
+        </li>
+    </ul>
+    </section>
 <footer>
     <%- include("../partial/footer") %> >
 </footer>
