@@ -6,7 +6,11 @@
     <%- include ("../partial/header") %>
 </header>
 <% productos.forEach(producto => { %>
+    <article class="sale-product">
+    <p><img src="./images/botella.png" alt=""></p>
     <p><%= producto.name%> </p>
+    <p><%="$" + producto.price %> </p>
+    </article>
 <% }) %>
     <footer>
         <%- include ("../partial/footer") %> 
