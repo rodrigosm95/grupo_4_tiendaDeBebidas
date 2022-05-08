@@ -45,3 +45,13 @@ li a{
     color: black;
     font-size: 15px;
 }
+
+li label{
+    width: 100%;
+    color: black;
+    font-size: 15px;
+}
+
+li imput{
+    width: 5%;
+}

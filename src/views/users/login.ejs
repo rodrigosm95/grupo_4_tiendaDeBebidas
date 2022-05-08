@@ -10,7 +10,7 @@
     </header>
     <h1 style="color: black; text-align: center;">¡BIENVENIDOS!</h1>
     <section class="forms">
-        <form class="form" action ="/login" method="post">
+        <form action ="/login" method="post">
             <section class="imputs">
                 <input class="imput" type="text" name="email" placeholder="Correo electrónico">
             <% if (locals.errors && errors.email) { %>
@@ -20,13 +20,13 @@
                 <input class="imput" type="password" name="pass" placeholder="Contraseña">
                 <button type="submit">Ingresar</button>
             </section>                
-    </form>
-    <ul>
-        <li>
-            <a href="#">Olvidaste la contraseña?</a>
-            <a href="/register">No tienes cuenta? Regístrate!</button></a>
-        </li>
-    </ul>
+        </form>
+        <ul>
+            <li>
+                <a href="#">Olvidaste la contraseña?</a>
+                <a href="/register">No tienes cuenta? Regístrate!</button></a>
+            </li>
+        </ul>
     </section>
 <footer>
     <%- include("../partial/footer") %> >

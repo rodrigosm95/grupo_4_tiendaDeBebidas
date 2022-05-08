@@ -7,62 +7,51 @@
 <header>
   <%- include("../partial/header") %>
 </header>
-        <div class="form-register">
-            <form action="/register/guardar" method="post" enctype="multipart/form-data">
-                <h1>
-                    REGISTRO DE USUARIOS
-                </h1>
-                
-                <p>
-                    <input class="controls" type="text" name="name" placeholder="Nombre y Apellido">
-                </p>
-                
-                <p>
-                    <input class="controls" type="text" name="address"  placeholder="Dirección">
-                </p>
+    <h1 style="color: black; text-align: center;">REGISTRO DE USUARIOS</h1>
+    <section class="forms">
+        <form action="/register/guardar" method="post" enctype="multipart/form-data">
 
-                <p>
-                    <input class="controls" type="text" name="province" placeholder="Provincia">
-                </p>
-                
-                <p>
-                    <input class="controls" type="text" name="location" placeholder="Localidad">
-                </p>
-                
-                <p>
-                    <input class="controls" type="email" name="email" placeholder="Correo electrónico">
-                </p>
-                
-                <p>
-                    <input class="controls" type="password" name="pass" placeholder="Contraseña">
-                </p>
+            
+                <input class="controls" type="text" name="name" placeholder="Nombre y Apellido">
+            
+                <input class="controls" type="text" name="address"  placeholder="Dirección">
 
-                <p>
-                    <input class="controls" type="file" name="FotoPerfil" placeholder="Foto de perfil">
-                </p>
+                <input class="controls" type="text" name="province" placeholder="Provincia">
+            
+                <input class="controls" type="text" name="location" placeholder="Localidad">
+            
+                <input class="controls" type="email" name="email" placeholder="Correo electrónico">
+            
+                <input class="controls" type="password" name="pass" placeholder="Contraseña">
 
-                <section class="check">
-                    <p>
-                        <label for="terminos">Soy mayor de 18 años.</label>
+                <input class="controls" type="file" name="FotoPerfil" placeholder="Foto de perfil">
+
+            <ul>
+                <li>
+
+                    <label for="terminos">Soy mayor de 18 años.
                         <input type="checkbox" name="legalAge" value="Si mayor de edad" id="terminos">
-                    </p>
-                    <p>
-                        <label for="politicas">Acepto las políticas de privacidad.</label>
+                    </label>
+
+                    
+                    <label for="politicas">Acepto las políticas de privacidad.
                         <input type="checkbox" name="politicas" value="Si politicas" id="politicas">
-                    </p>
-                    <p>
-                        <label for="promociones">Quiero recibir promociones y novedades por correo electrónico.</label>
+                    </label>
+
+                    
+                    <label for="promociones">Quiero recibir promociones y novedades por correo electrónico.
                         <input type="checkbox" name="notificaciones" value="Si promociones" id="promociones">
-                    </p>
-                </section>
-                    <p>
-                        <input class="buttons" type="reset" value="Borrar todo">
-                        <input class="buttons" type="submit" value="Registrarse">
-                    </p>
-            </form>
-        </div>
-        <footer>
-          <%- include("../partial/footer") %> >
-        </footer>
+                    </label>
+                </li>
+            </ul>
+                    <button type="reset">Borrar todo</button>
+                    <button type="submit">Registrarse</button>
+
+
+        </form>
+    </section>
+    <footer>
+        <%- include("../partial/footer") %> >
+    </footer>
 </body>
 </html> 
