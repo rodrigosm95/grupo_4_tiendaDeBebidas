@@ -11,13 +11,13 @@ const controller = {
 
             const nuevo = generate(req.body);
             create(nuevo);
-            return res.redirect('/products/product_detail');
+            return res.redirect('/products');
 
         } else {
             
             const nuevo = generate(req.body);
             create(nuevo);
-            return res.redirect('/products/product_detail');
+            return res.redirect('/products');
         }
     }
 }

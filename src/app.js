@@ -26,4 +26,4 @@ app.use(require('./routes/product_detail'));
 app.use(require('./routes/create_product'));
 app.use(require('./routes/update'));
 app.use(require('./routes/profile'));
-app.use(require('./routes/products'))
+app.use(require('./routes/products'));

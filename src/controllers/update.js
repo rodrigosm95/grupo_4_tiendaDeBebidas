@@ -17,12 +17,13 @@ const controller = {
                 producto.price = req.body.price;
                 producto.description = req.body.description;
                 producto.stock = req.body.stock;
+                producto.categorie = req.body.categorie
                 return producto;
             }
             return producto;
         })
         write(productos)
-        return res.send(req.body)
+        return res.redirect("../")
     },
     remove: (req, res) => {
         res.send("Delete funciona")

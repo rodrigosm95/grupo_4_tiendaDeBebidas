@@ -10,32 +10,27 @@
     <header>
         <%- include("../partial/header") %> 
     </header>
-    <h1>Crear un Producto</h1>
-    <form action="/products/guardar" method="post" enctype="multipart/form-data">
-        <fieldset>
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name" placeholder="Name">
-        </fieldset>
-        <fieldset>
-            <label for="description">Description</label>
-            <textarea name="description" id="description" cols="30" rows="10"></textarea>
-        </fieldset>
-        <fieldset>
-            <label for="price">Price</label>
-            <input type="number" min="1" name="price" id="price">
-        </fieldset>
-        <fieldset>
-            <label for="stock">Stock</label>
-            <input type="range" min="1" max="100" name="stock" id="stock" step="1">
-        </fieldset>
-        <fieldset>
-            <label for="Image">Imagen</label>
-            <input type="file" name="ProductImage" id="Imagen" placeholder="Imagen">
-        </fieldset>
-        <fieldset>
-            <button type="submit">Guardar</button>
-        </fieldset>
-    </form>
+    <section class="forms">
+        <h1>Crear un Producto</h1>
+        <form action="/products/guardar" method="post" enctype="multipart/form-data">
+            <section class="imputs">
+                <input class="imput" type="text" name="name" id="name" placeholder="Nombre">
+                    <input type="text" class="imput" name="description" id="description" placeholder="Descripcion">
+                    <input class="imput" type="number" name="price" id="price" placeholder="Precio">
+                    <input class="imput" type="number" name="stock" id="stock" placeholder="Stock">
+                    <select class="imput" name="categorie" id="categorie">
+                        <option value="1">Categoria 1</option>
+                        <option value="2">Categoria 2</option>
+                        <option value="3">Categoria 3</option>
+                        <option value="4">Categoria 4</option>
+                        <option value="5">Categoria 5</option>
+                        <option value="6">Categoria 6</option>
+                    </select>
+                    <input class="imput" type="file" name="imagen" id="imagen">
+                <button type="submit">Guardar</button>
+            </section>
+        </form>
+    </section>
     <footer>
         <%- include("../partial/footer") %> 
     </footer>
