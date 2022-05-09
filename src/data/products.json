@@ -2,9 +2,10 @@
   {
     "id": 1,
     "name": "Patagonia 500ml",
-    "description": "Lata Cerveza Patagonia 500ml",
-    "price": "60",
-    "stock": "100"
+    "description": "Lata Cerveza Patagonia 500ml    ",
+    "price": "100",
+    "stock": "100",
+    "categorie": "2"
   },
   {
     "id": 2,
@@ -54,6 +55,15 @@
     "description": "Probando si carga la imagen del producto",
     "price": 23123,
     "stock": 18,
+    "ProductImage": []
+  },
+  {
+    "id": 9,
+    "name": "probando",
+    "description": "",
+    "price": 0,
+    "stock": 0,
+    "categorie": "1",
     "ProductImage": []
   }
 ]

@@ -15,6 +15,7 @@ const model = {
         description: data.description,
         price: Number(data.price),
         stock: Number(data.stock),
+        categorie: data.categorie,
         ProductImage: data.ProductImage > 0 ? data.ProductImage : []
     }),
     create: data => {

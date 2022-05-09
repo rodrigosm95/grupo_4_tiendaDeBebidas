@@ -24,7 +24,8 @@
     },
     "homepage": "https://github.com/rodrigosm95/grupo_4_tiendaDeBebidas#readme",
     "dependencies": {
-        "ejs": "^3.1.6",
+        "bcryptjs": "^2.4.3",
+        "ejs": "^3.1.7",
         "express": "^4.17.2",
         "method-override": "^3.0.0",
         "multer": "^1.4.4",

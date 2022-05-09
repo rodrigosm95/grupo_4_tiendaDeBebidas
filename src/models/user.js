@@ -1,13 +1,14 @@
 const { readFileSync, writeFileSync, unlinkSync, existsSync } = require('fs');
 const { resolve } = require('path');
+const bc = require ('bcryptjs')
 const model = {
     file: resolve(__dirname, "../data", "users.json"),
     read: () => readFileSync(model.file),
     list: () => JSON.parse(model.read()),
     convert: data => JSON.stringify(data, null, 2),
     write: data => writeFileSync(model.file, model.convert(data)),
-    find : (id) => {
-        let rows = model.list();
+    find(id) {
+        let rows = this.list();
         return rows.find(row => row.id == id)
     },
     filter: (propiedad, valor) => model.all().filter(user => typeof valor !== "string" ? user[propiedad] == valor : user[propiedad].includes(valor)),
@@ -19,7 +20,7 @@ const model = {
         province: data.province,
         location: data.location,
         email: data.email,
-        pass: data.pass,
+        pass: bc.hashSync(data.pass, 10),
         category: data.category > 0 ? data.category : "user",
         image: data.image ? data.image : "default.png",
         legalAge: data.legalAge && data.legalAge.length > 0 ? data.legalAge : [],
@@ -28,14 +29,11 @@ const model = {
     }),
     create: data => {
         let lista = model.list().sort((a, b) => a.id < b.id ? -1 : a.id > b.id ? 1 : 0)
+
         lista.push(data);
         model.write(lista);
-    },
-    findByField : (field, text) => {
-        let allUser = model.list();
-        let userFound = allUser.find(row => row[field] === text)
-        return userFound
-    }        
+    }
 }
+
 
 module.exports = model;
