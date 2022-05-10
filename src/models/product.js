@@ -2,26 +2,44 @@ const { readFileSync, writeFileSync, unlinkSync, existsSync } = require('fs');
 const { resolve } = require('path');
 const model = {
     file: resolve(__dirname, "../data", "products.json"),
-    read: () => readFileSync(model.file),
-    list: () => JSON.parse(model.read()),
-    convert: data => JSON.stringify(data, null, 2), 
-    write: data => writeFileSync(model.file, model.convert(data)),
-    all: () => model.list().filter(producto => producto.stock > 0),
-    filter: (propiedad, valor) => model.all().filter(producto => typeof valor !== "string" ? producto[propiedad] == valor : producto[propiedad].includes(valor)),
-    match: (propiedad, valor) => model.all().find(producto => producto[propiedad] == valor),
-    generate: data => Object({
-        id: model.list().length > 0 ? model.list().sort((a, b) => a.id < b.id ? -1 : a.id > b.id ? 1 : 0).pop().id + 1 : 1,
-        name: data.name,
-        description: data.description,
-        price: Number(data.price),
-        stock: Number(data.stock),
-        categorie: data.categorie,
-        ProductImage: data.ProductImage > 0 ? data.ProductImage : []
-    }),
-    create: data => {
-        let lista = model.list().sort((a, b) => a.id < b.id ? -1 : a.id > b.id ? 1 : 0);
-        lista.push(data);
-        model.write(lista);
+    getData: () => JSON.parse(readFileSync(model.file, 'utf-8' )),
+    findAll: () => {
+        return model.getData()
+    },
+    genereteId: function () {
+        let allProducts = model.findAll();
+        let lastProduct = allProducts.pop();
+        if (lastProduct) {
+            return lastProduct.id + 1;
+        }else{
+            return 1
+        }
+    },
+    findByPk: function (id) {
+        let allProducts = model.findAll();
+        let productFound = allProducts.find(oneProduct => oneProduct.id === id);
+        return productFound;
+    },
+    findByField: function (field, text) {
+        let allProducts = model.findAll();
+        let productFound = allProducts.find(oneProduct => oneProduct[field] === text);
+        return productFound;
+    },
+    create: function (productData) {
+        let allProducts = model.findAll();
+        let newProduct = {
+            id: this.genereteId(),
+            ...productData
+        }
+        allProducts.push(newProduct)
+        writeFileSync(this.file, JSON.stringify(allProducts, null, ' '));
+        return newProduct
+    },
+    delete: function (id) {
+        let allProducts = this.findAll();
+        let finalProducts = allProducts.filter(oneProduct => oneProduct.id !== id);
+        writeFileSync(this.file, JSON.stringify(finalProducts, null, ' '));
+        return true
     }
 }
 

@@ -3,37 +3,44 @@ const { resolve } = require('path');
 const bc = require ('bcryptjs')
 const model = {
     file: resolve(__dirname, "../data", "users.json"),
-    read: () => readFileSync(model.file),
-    list: () => JSON.parse(model.read()),
-    convert: data => JSON.stringify(data, null, 2),
-    write: data => writeFileSync(model.file, model.convert(data)),
-    find(id) {
-        let rows = this.list();
-        return rows.find(row => row.id == id)
+    getData: () => JSON.parse(readFileSync(model.file, 'utf-8' )),
+    findAll: () => {
+        return model.getData()
     },
-    filter: (propiedad, valor) => model.all().filter(user => typeof valor !== "string" ? user[propiedad] == valor : user[propiedad].includes(valor)),
-    match: (propiedad, valor) => model.all().find(user => user[propiedad] == valor),
-    generate: data => Object({
-        id: model.list().length > 0 ? model.list().sort((a, b) => a.id < b.id ? -1 : a.id > b.id ? 1 : 0).pop().id + 1 : 1,
-        name: data.name,
-        address: data.address,
-        province: data.province,
-        location: data.location,
-        email: data.email,
-        pass: bc.hashSync(data.pass, 10),
-        category: data.category > 0 ? data.category : "user",
-        image: data.image ? data.image : "default.png",
-        legalAge: data.legalAge && data.legalAge.length > 0 ? data.legalAge : [],
-        politicas: data.politicas && data.politicas.length > 0 ? data.politicas : [],
-        notificaciones: data.notificaciones && data.notificaciones.length > 0 ? data.notificaciones : [],
-    }),
-    create: data => {
-        let lista = model.list().sort((a, b) => a.id < b.id ? -1 : a.id > b.id ? 1 : 0)
-
-        lista.push(data);
-        model.write(lista);
+    genereteId: function () {
+        let allUsers = model.findAll();
+        let lastUser = allUsers.pop();
+        if (lastUser) {
+            return lastUser.id + 1;
+        }else{
+            return 1
+        }
+    },
+    findByPk: function (id) {
+        let allUsers = model.findAll();
+        let userFound = allUsers.find(oneUser => oneUser.id === id);
+        return userFound;
+    },
+    findByField: function (field, text) {
+        let allUsers = model.findAll();
+        let userFound = allUsers.find(oneUser => oneUser[field] === text);
+        return userFound;
+    },
+    create: function (userData) {
+        let allUsers = model.findAll();
+        let newUser = {
+            id: this.genereteId(),
+            ...userData
+        }
+        allUsers.push(newUser)
+        writeFileSync(this.file, JSON.stringify(allUsers, null, ' '));
+        return newUser
+    },
+    delete: function (id) {
+        let allUsers = this.findAll();
+        let finalUsers = allUsers.filter(oneUser => oneUser.id !== id);
+        writeFileSync(this.file, JSON.stringify(finalUsers, null, ' '));
+        return true
     }
 }
-
-
 module.exports = model;

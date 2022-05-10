@@ -1,5 +1,5 @@
 const model = require("../models/product");
-const { match, list, write, remove } = require("../models/product");
+const { match, list, write, remove} = require("../models/product");
 
 const controller = {
     update: (req, res) => {
@@ -26,7 +26,9 @@ const controller = {
         return res.redirect("../")
     },
     remove: (req, res) => {
-        res.send("Delete funciona")
+        let productos = model.findAll
+        model.delete(productos)
+        res.redirect("/")
     }
 }
 module.exports = controller;

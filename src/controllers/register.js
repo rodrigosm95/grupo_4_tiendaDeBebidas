@@ -1,27 +1,24 @@
-const { generate, create } = require("../models/user");
+const user = require("../models/user");
+const bc = require("bcryptjs");
+const bcryptjs = require("bcryptjs");
 
 const controller = {
     index: (req, res) => res.render('./users/register'),
     store: (req, res) => {
+        let userInDb = user.findByField("email", req.body.email)
 
-        if (req.file) {
+        if (userInDb) {
+            return res.render('./users/register');
+        };
 
-            let image = req.body;
-            image.image = req.file.filename;
+        let userCreate = {
+            ...req.body,
+            pass: bcryptjs.hashSync(req.body.pass, 10),
+            avatar: req.file.filename,
 
-            
-
-            const nuevo = generate(req.body);
-            create(nuevo);
-            return res.redirect('/users/' + nuevo.id);
-
-        } else {
-
-            const nuevo = generate(req.body);
-            create(nuevo);
-            return res.redirect('/users/' + nuevo.id);
         }
-
+        let userCreated = user.create(userCreate);
+        return res.redirect("/login");
     }
 }
 
