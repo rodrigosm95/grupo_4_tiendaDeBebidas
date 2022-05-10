@@ -12,12 +12,11 @@
     <section class="forms">
         <form action ="/login" method="post">
             <section class="imputs">
-                <input class="imput" type="text" name="email" placeholder="Correo electrónico">
-            <% if (locals.errors && errors.email) { %>
-                    <div style="color: red;"><%= errors.email.msg %></div> 
-            <% } %>
+                <label class="label<%= locals.errors && errors.email ? "_error" : null %> " for="email">Email</label >
+                <input class="imput" type="text" name="email" >
 
-                <input class="imput" type="password" name="pass" placeholder="Contraseña">
+                <label class="label<%= locals.errors && errors.pass ? "_error" : null %> " for="email">Contraseña</label >
+                <input class="imput" type="password" name="pass">
                 <button type="submit">Ingresar</button>
             </section>                
         </form>

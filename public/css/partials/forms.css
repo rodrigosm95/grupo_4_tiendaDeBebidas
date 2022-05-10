@@ -12,6 +12,13 @@
     width: 30%;
     margin-bottom: 20px;
 }
+.label{
+    margin: auto;
+}
+.label_error{
+    margin: auto;
+    color: red;
+}
 
 .imputs{
     display: flex;

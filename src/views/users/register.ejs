@@ -9,45 +9,33 @@
 </header>
     <h1 style="color: black; text-align: center;">REGISTRO DE USUARIOS</h1>
     <section class="forms">
-        <form action="/register/guardar" method="post" enctype="multipart/form-data">
+        <form action="/register" method="post" enctype="multipart/form-data">
             <section class="imputs">
-            
-                <input class="imput" type="text" name="name" placeholder="Nombre y Apellido">
-            
-                <input class="imput" type="text" name="address"  placeholder="Dirección">
+                <label class="label<%= locals.errors && errors.name ? "_error" : null %> " for="name">Nombre y Apellido</label >
+                <input class="imput" type="text" name="name" value="<%= locals.oldData ? oldData.name : null %> ">
+                
+                <label class="label<%= locals.errors && errors.address ? "_error" : null %> " for="address">Direccion</label >
+                <input class="imput" type="text" name="address" value="<%= locals.oldData ? oldData.adress : null %> ">
 
-                <input class="imput" type="text" name="province" placeholder="Provincia">
-            
-                <input class="imput" type="text" name="location" placeholder="Localidad">
-            
-                <input class="imput" type="email" name="email" placeholder="Correo electrónico">
-            
-                <input class="imput" type="password" name="pass" placeholder="Contraseña">
+                <label class="label<%= locals.errors && errors.province ? "_error" : null %> "  for="province">Provincia</label >
+                <input class="imput" type="text" name="province" value="<%= locals.oldData ? oldData.province : null %> ">
 
-                <input class="imput" type="file" name="FotoPerfil" placeholder="Foto de perfil">
+                <label class="label<%= locals.errors && errors.location ? "_error" : null %> " >Localidad</label >
+                <input class="imput" type="text" name="location" value="<%= locals.oldData ? oldData.location : null %> ">
+
+                <label class="label<%= locals.errors && errors.email ? "_error" : null %> "  for="email">Email</label >
+                <input class="imput" type="email" name="email" value="<%= locals.oldData ? oldData.email : null %> ">
+
+                <label class="label<%= locals.errors && errors.pass ? "_error" : null %> " for="">Password</label >
+                <input class="imput" type="password" name="pass">
+                
+                <% if (locals.errors && errors.avatar) { %>
+                    <span style="color: red; margin: auto"> <%= errors.avatar.msg %> </span>
+                <% } %>
+                <input class="imput" type="file" name="avatar" placeholder="Foto de perfil">
             </section>
-            <ul>
-                <li>
-
-                    <label for="terminos">Soy mayor de 18 años.
-                        <input type="checkbox" name="legalAge" value="Si mayor de edad" id="terminos">
-                    </label>
-
-                    
-                    <label for="politicas">Acepto las políticas de privacidad.
-                        <input type="checkbox" name="politicas" value="Si politicas" id="politicas">
-                    </label>
-
-                    
-                    <label for="promociones">Quiero recibir promociones y novedades por correo electrónico.
-                        <input type="checkbox" name="notificaciones" value="Si promociones" id="promociones">
-                    </label>
-                </li>
-            </ul>
                     <button type="reset">Borrar todo</button>
                     <button type="submit">Registrarse</button>
-
-
         </form>
     </section>
     <footer>
