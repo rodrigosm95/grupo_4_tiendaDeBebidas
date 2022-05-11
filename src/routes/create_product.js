@@ -1,5 +1,5 @@
 const { Router } = require('express');
-const { index, store } = require('../controllers/create_product');
+const { index, store, created } = require('../controllers/create_product');
 const router = Router();
 const path = require('path');
 const multer = require('multer');
@@ -19,5 +19,6 @@ const upload = multer({ storage });
 
 router.get('/products/create',authMiddleware, index);
 router.post('/products/guardar', upload.single('ProductImage'),store)
+router.get('/products/created',authMiddleware, created);
 
 module.exports = router;

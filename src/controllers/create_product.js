@@ -8,7 +8,10 @@ const controller = {
             ...req.body,
             ProductImage: req.file.filename
         });
-        return res.redirect('/products')
+        return res.render('./products/created')
+    },
+    created: (req,res) => {
+        res.render('./products/created')
     }
 }
 

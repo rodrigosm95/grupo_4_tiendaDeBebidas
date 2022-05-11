@@ -6,17 +6,7 @@
   "province": "Chaco",
   "location": "resistencia",
   "email": "rodrigo.sanmartin95@gmail.com",
-  "pass": "$2a$10$JoJSeBwSfRBaWvtdm2s9OuKPMXpwjFNeSjQSMBvLA38bD1ohBfo6G",
-  "avatar": "user-1652228825772.png"
- },
- {
-  "id": 2,
-  "name": "rodrigo san martin",
-  "address": "Bouzadas 637",
-  "province": "Chaco",
-  "location": "resistencia",
-  "email": "rodrigo@rodrigo.com",
-  "pass": "$2a$10$Q4/CjMrqQ5V./3Wh.VDuCeMXFGT8bcNThXz.zWnZYLqnMIxLsn.m.",
-  "avatar": "user-1652241226827.png"
+  "pass": "$2a$10$ONfJBRcUj4d4MzJvxGzrmuk1M5OyZzfYLkeU5c/zXuw/vcDvDuKoy",
+  "avatar": "user-1652247222881.png"
  }
 ]
