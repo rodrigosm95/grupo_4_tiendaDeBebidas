@@ -1,6 +1,8 @@
 const user = require("../models/user");
+const products = require('../models/product')
 const {validationResult} = require('express-validator');
 const bcryptjs = require("bcryptjs");
+
 
 const controller = {
     index: (req,res) => {
@@ -24,7 +26,7 @@ const controller = {
                 req.session.userLogged = userToLogin;
                 if (req.body.remember_user) {
                     res.cookie('userEmail', req.body.email, {
-                        maxAge: 1000 * 120
+                        maxAge: (1000 * 60) * 15
                     })
                 }
                 return res.redirect('./profile');
@@ -59,5 +61,4 @@ const controller = {
         return res.redirect('./')
     } 
 }
-
 module.exports = controller;

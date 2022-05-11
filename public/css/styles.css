@@ -39,12 +39,12 @@
     text-transform: uppercase;
 }
 
-.sales{
+a .sales{
     display: flex;
     flex-wrap: wrap;
 }
 
-.sales h2{
+a .sales h2{
     width: 100%;
     text-align: center;
 }

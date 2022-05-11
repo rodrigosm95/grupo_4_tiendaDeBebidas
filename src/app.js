@@ -32,8 +32,6 @@ app.use(method("m"));
 app.use(require('./routes/main'));
 app.use(require('./routes/register'));
 app.use(require('./routes/login'));
-app.use(require('./routes/cart'));
-app.use(require('./routes/product_detail'));
 app.use(require('./routes/create_product'));
 app.use(require('./routes/update'));
 app.use(require('./routes/products'));

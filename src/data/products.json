@@ -1,126 +1,46 @@
-[
- {
-  "id": 1,
-  "name": "producto 1",
-  "description": "sa.d,sa",
-  "price": 100,
-  "stock": 100,
-  "categorie": "1",
-  "ProductImage": "product-1652147082814.png"
- },
+[ {
+    "id": 1,
+    "name": " producto1",
+    "description": " asdsad",
+    "price": "12321",
+    "stock": "123213",
+    "categorie": "1",
+    "ProductImage": "product-1652306572855.png"
+   },
  {
   "id": 2,
-  "name": "producto 2",
-  "description": "23132",
-  "price": 1321321,
-  "stock": 312321,
+  "name": " producto 2",
+  "description": " asdsad",
+  "price": "12321",
+  "stock": "123213",
   "categorie": "2",
-  "ProductImage": "botella.png"
+  "ProductImage": "product-1652306572855.png"
  },
  {
-  "id": 3,
-  "name": "producto 3",
-  "description": "123132",
-  "price": 32132454,
-  "stock": 321654,
-  "categorie": "3",
-  "ProductImage": "botella.png"
- },
- {
-  "id": 4,
-  "name": "asdasd",
-  "description": "",
-  "price": "",
-  "stock": "",
-  "categorie": "1"
- },
- {
-  "id": 5,
-  "name": "producto 4",
-  "description": "bla bla bla",
-  "price": "100",
-  "stock": "100",
-  "categorie": "5"
- },
- {
-  "id": 6,
-  "name": "dsfds",
-  "description": "sdfdsf",
-  "price": "342423",
-  "stock": "234234",
-  "categorie": "6",
-  "image": "product-1652213220280.png"
- },
- {
-  "id": 7,
-  "name": "producto con imagen",
-  "description": "123",
-  "price": "123",
-  "stock": "123",
-  "categorie": "2",
-  "ProductImage": "product-1652242032965.jpg"
- },
- {
-  "id": 8,
-  "name": "probando",
-  "description": "asdas",
-  "price": "",
-  "stock": "",
-  "categorie": "1",
-  "ProductImage": "product-1652245023293.png"
- },
- {
-  "id": 9,
-  "name": "123",
-  "description": "123",
-  "price": "123",
-  "stock": "123",
-  "categorie": "3",
-  "ProductImage": "product-1652245279819.jpg"
- },
- {
-  "id": 10,
-  "name": "probando",
-  "description": "dasdsa",
-  "price": "2132",
-  "stock": "213",
-  "categorie": "1",
-  "ProductImage": "product-1652245492597.jpg"
- },
- {
-  "id": 11,
-  "name": "123",
-  "description": "123",
-  "price": "123",
-  "stock": "123",
-  "categorie": "5",
-  "ProductImage": "product-1652245794554.jpg"
- },
- {
-  "id": 12,
-  "name": "123",
-  "description": "123",
-  "price": "123",
-  "stock": "123",
-  "categorie": "5",
-  "ProductImage": "product-1652245842754.jpg"
- },
- {
-  "id": 13,
-  "name": "123",
-  "description": "123",
-  "price": "123",
-  "stock": "123",
-  "categorie": "5",
-  "ProductImage": "product-1652245868863.jpg"
- },
- {
-  "id": 14,
-  "name": "123",
-  "description": "123",
-  "price": "123",
-  "stock": "123",
-  "categorie": "5",
-  "ProductImage": "product-1652245893681.jpg"
- }
+    "id": 3,
+    "name": " producto 3",
+    "description": " asdsad",
+    "price": "12321",
+    "stock": "123213",
+    "categorie": "3",
+    "ProductImage": "product-1652306572855.png"
+   },
+   {
+    "id": 4,
+    "name": " producto 4",
+    "description": " asdsad",
+    "price": "12321",
+    "stock": "123213",
+    "categorie": "4",
+    "ProductImage": "product-1652306572855.png"
+   },
+   {
+    "id": 5,
+    "name": " producto 5",
+    "description": " asdsad",
+    "price": "12321",
+    "stock": "123213",
+    "categorie": "5",
+    "ProductImage": "product-1652306572855.png"
+   }
 ]

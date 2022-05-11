@@ -6,6 +6,6 @@ router.get('/products/editar/:id', update);
 
 router.put('/products/actualizar', modify);
 
-router.delete('/products/delete/:id', remove);
+// router.delete('/products/delete/:id', remove);
 
 module.exports = router;
