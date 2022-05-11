@@ -22,6 +22,11 @@ const controller = {
             if (passOk) {
                 delete userToLogin.pass;
                 req.session.userLogged = userToLogin;
+                if (req.body.remember_user) {
+                    res.cookie('userEmail', req.body.email, {
+                        maxAge: 1000 * 120
+                    })
+                }
                 return res.redirect('./profile');
             } else {
                 return res.render('./users/login',{
@@ -45,11 +50,11 @@ const controller = {
         }
     },
     profile: (req,res) => {
-        console.log();
        res.render('./users/profile',{
             user: req.session.userLogged
         })},
     logout: (req,res) => {
+        res.clearCookie('userEmail')
         req.session.destroy();
         return res.redirect('./')
     } 

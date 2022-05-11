@@ -50,5 +50,77 @@
   "stock": "234234",
   "categorie": "6",
   "image": "product-1652213220280.png"
+ },
+ {
+  "id": 7,
+  "name": "producto con imagen",
+  "description": "123",
+  "price": "123",
+  "stock": "123",
+  "categorie": "2",
+  "ProductImage": "product-1652242032965.jpg"
+ },
+ {
+  "id": 8,
+  "name": "probando",
+  "description": "asdas",
+  "price": "",
+  "stock": "",
+  "categorie": "1",
+  "ProductImage": "product-1652245023293.png"
+ },
+ {
+  "id": 9,
+  "name": "123",
+  "description": "123",
+  "price": "123",
+  "stock": "123",
+  "categorie": "3",
+  "ProductImage": "product-1652245279819.jpg"
+ },
+ {
+  "id": 10,
+  "name": "probando",
+  "description": "dasdsa",
+  "price": "2132",
+  "stock": "213",
+  "categorie": "1",
+  "ProductImage": "product-1652245492597.jpg"
+ },
+ {
+  "id": 11,
+  "name": "123",
+  "description": "123",
+  "price": "123",
+  "stock": "123",
+  "categorie": "5",
+  "ProductImage": "product-1652245794554.jpg"
+ },
+ {
+  "id": 12,
+  "name": "123",
+  "description": "123",
+  "price": "123",
+  "stock": "123",
+  "categorie": "5",
+  "ProductImage": "product-1652245842754.jpg"
+ },
+ {
+  "id": 13,
+  "name": "123",
+  "description": "123",
+  "price": "123",
+  "stock": "123",
+  "categorie": "5",
+  "ProductImage": "product-1652245868863.jpg"
+ },
+ {
+  "id": 14,
+  "name": "123",
+  "description": "123",
+  "price": "123",
+  "stock": "123",
+  "categorie": "5",
+  "ProductImage": "product-1652245893681.jpg"
  }
 ]
