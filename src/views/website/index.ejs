@@ -22,41 +22,16 @@
         </section>
         <section class="sales">
             <h2>PRODUCTOS DESTACADOS</h2>
-            <article class="sale-product">                    
-                <a class="producto-destacado" href="#">
-                    <img src="./images/botella.png" alt="fernet branca">
-                    <div class="descripcion-producto">
-                    <h4>Fernet Branca 750ml</h4>
-                    <p>$600</p>
-                    </div>
+            
+            <% productos.forEach(producto => { %>
+                <a href="/products/<%= producto.id %>">
+                    <article class="sale-product">
+                    <p><img src="./images/products/<%= producto.ProductImage %> " alt=""></p>
+                    <p><%= producto.name%> </p>
+                    <p><%="$" + producto.price %> </p>
+                    </article>
                 </a>
-            </article>
-            <article class="sale-product">
-                    <a class="producto-destacado" href="#">
-                        <img src="./images/botella.png" alt="vodka mas cepita">
-                        <div class="descripcion-producto">
-                            <h4>Fernet Branca 750ml</h4>
-                            <p>$600</p>
-                        </div>
-                    </a>
-            </article>
-            <article class="sale-product">
-                    <a class="producto-destacado" href="#">
-                        <img src="./images/botella.png"alt="paso de los toros mas gancia">
-                        <div class="descripcion-producto">
-                            <h4>Fernet Branca 750ml</h4>
-                            <p>$600</p>
-                        </div>
-                    </a>
-            </article>
-            <article class="sale-product">
-                    <a class="producto-destacado" href="#">
-                        <img src="./images/botella.png" alt="jose cuervo">
-                        <div class="descripcion-producto">
-                            <h4>Fernet Branca 750ml</h4>
-                            <p>$600</p>
-                        </div>
-                    </a>
+            <% }) %>
             </article>
     </main>
     <footer>

@@ -14,10 +14,19 @@
         <h1>Crear un Producto</h1>
         <form action="/products/guardar" method="post" enctype="multipart/form-data">
             <section class="imputs">
-                <input class="imput" type="text" name="name" id="name" placeholder="Nombre">
-                    <input type="text" class="imput" name="description" id="description" placeholder="Descripcion">
-                    <input class="imput" type="number" name="price" id="price" placeholder="Precio">
-                    <input class="imput" type="number" name="stock" id="stock" placeholder="Stock">
+                <label class="label<%= locals.errors && errors.name ? "_error" : null%>">Nombre</label>
+                <input class="imput" type="text" name="name" id="name"value="<%= locals.oldData ? oldData.name : null %> ">
+
+                <label class="label">description</label>
+                <input type="text" class="imput" name="description" id="description" value="<%= locals.oldData ? oldData.description : null %> ">
+                
+                <label class="label">precio</label>
+                    <input class="imput" type="number" name="price" id="price" value="<%= locals.oldData ? oldData.price : null %> " >
+
+                    <label class="label">stock</label>
+                    <input class="imput" type="number" name="stock" id="stock" value="<%= locals.oldData ? oldData.stock : null %> ">
+
+                    <label class="label">Seleccione una categoria</label>
                     <select class="imput" name="categorie" id="categorie">
                         <option value="1">Categoria 1</option>
                         <option value="2">Categoria 2</option>

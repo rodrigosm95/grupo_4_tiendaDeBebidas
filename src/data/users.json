@@ -8,5 +8,15 @@
   "email": "rodrigo.sanmartin95@gmail.com",
   "pass": "$2a$10$ONfJBRcUj4d4MzJvxGzrmuk1M5OyZzfYLkeU5c/zXuw/vcDvDuKoy",
   "avatar": "user-1652247222881.png"
+ },
+ {
+  "id": 2,
+  "name": " rodrigo ",
+  "address": "123",
+  "province": "chaco",
+  "location": "resistencia",
+  "email": "r@r.com",
+  "pass": "$2a$10$8LNIZkJVUKzhAcS.w3fQuucktUlqebS1y.wyOY.jXnZQW5t1kF5Gq",
+  "avatar": "user-1652307145007.png"
  }
 ]
