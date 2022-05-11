@@ -19,6 +19,14 @@ const controller = {
         res.render('./products/update', {
             product: productById})
     },
+    categories: (req,res) => {
+        let allProducts = products.findAll();
+        let catProducts = allProducts.filter(oneproduct => oneproduct["categorie"] === req.params.id)
+        res.render('./products/categories_products',{
+            productos : catProducts
+        })
+    },
+    
     delete: (req,res) => {
         let id = Number(req.params.id)
         products.delete(id)

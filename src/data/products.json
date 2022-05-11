@@ -1,14 +1,5 @@
 [
  {
-  "id": 2,
-  "name": "producto 2",
-  "description": "2",
-  "price": "2",
-  "stock": "2",
-  "categorie": "2",
-  "ProductImage": "product-1652247283623.png"
- },
- {
   "id": 3,
   "name": "producto 3",
   "description": "3",
@@ -46,29 +37,11 @@
  },
  {
   "id": 7,
-  "name": "producto 7",
-  "description": "producto 7",
-  "price": "12312",
-  "stock": "2132",
-  "categorie": "1",
-  "ProductImage": "product-1652288836515.jpg"
- },
- {
-  "id": 8,
-  "name": "producto 7",
-  "description": "producto 7",
-  "price": "12312",
-  "stock": "2132",
-  "categorie": "1",
-  "ProductImage": "product-1652288894912.jpg"
- },
- {
-  "id": 9,
-  "name": "producto 7",
-  "description": "producto 7",
-  "price": "12312",
-  "stock": "2132",
-  "categorie": "1",
-  "ProductImage": "product-1652289006658.jpg"
+  "name": "",
+  "description": "sdfsdf",
+  "price": "232",
+  "stock": "324",
+  "categorie": "4",
+  "ProductImage": "product-1652299443196.png"
  }
 ]

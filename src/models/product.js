@@ -42,5 +42,4 @@ const model = {
         return true
     }
 }
-console.log();
 module.exports = model;

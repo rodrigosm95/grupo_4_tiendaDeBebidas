@@ -27,7 +27,7 @@
     height: 70%;
 }
 
-.logo img {
+.logo a img {
     height: 100%;
     width: auto;
     display: flex;

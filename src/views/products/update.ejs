@@ -11,7 +11,7 @@
     </header>
     <section class="forms">
         <h1>Actualizar producto</h1>
-        <form action="/products/guardar" method="post" enctype="multipart/form-data">
+        <form method="post" action="/products/update/<%= product.id %>?m=PUT" enctype="multipart/form-data">
             <section class="imputs">
                 <input class="imput" type="text" name="name" id="name" placeholder="Nombre" value="<%= product.name %>">
                     <input type="text" class="imput" name="description" id="description" placeholder="Descripcion" value="<%= product.description %>">

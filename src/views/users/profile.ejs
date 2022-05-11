@@ -7,8 +7,10 @@
     <header>
         <%- include("../partial/header") %> 
     </header>
-    <h1><%= user.name %> </h1>
-    <img src="/images/users/<%=user.avatar %> " alt="">
+    <section class="profile-card">
+        <h1>Bienvenido <%= user.name %> !!! </h1>    
+        <img src="/images/users/<%=user.avatar %> " alt="">
+    </section>
     <footer>
         <%- include("../partial/footer") %> >
     </footer>

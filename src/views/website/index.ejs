@@ -16,12 +16,9 @@
     <main>
         <section class="categories">
             <h2 class="titulo-main">CATEGORÍAS</h2>
-            <a href="">categoria 1</a>
-            <a href="">categoria 2</a>
-            <a href="">categoria 3</a>
-            <a href="">categoria 4</a>
-            <a href="">categoria 5</a>
-            <a href="">categoria 6</a>       
+            <% categories.forEach(categorie => { %>
+            <a href="/categories/<%= categorie.id  %> "><%= categorie.name %> </a>
+            <% }) %>   
         </section>
         <section class="sales">
             <h2>PRODUCTOS DESTACADOS</h2>

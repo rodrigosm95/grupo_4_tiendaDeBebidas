@@ -12,7 +12,7 @@
             <h4><%= product.name  %> </h4>
             <p>$<%= product.price  %> </p>
             </div>
-            <form method="POST" action="/products/update/<%= product.id %>?m=PUT">
+            <form action="/products/update/<%= product.id %>">
                 <button type="submit">editar producto</button>
             </form>
         </a>
