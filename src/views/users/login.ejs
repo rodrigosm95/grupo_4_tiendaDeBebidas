@@ -13,10 +13,16 @@
         <form action ="/login" method="post">
             <section class="imputs">
                 <label class="label<%= locals.errors && errors.email ? "_error" : null %> " for="email">Email</label >
-                <input class="imput" type="text" name="email" >
+                <input class="imput" type="text" name="email">
+                <% if (locals.errors && errors.email) { %>
+                    <span style="color: red; margin:auto"><%=  errors.email.msg  %></span>
+                <% } %>
 
-                <label class="label<%= locals.errors && errors.pass ? "_error" : null %> " for="email">Contraseña</label >
+                <label class="label">Contraseña</label >
                 <input class="imput" type="password" name="pass">
+                <% if (locals.errors && errors.pass) { %>
+                    <span style="color: red; margin:auto"><%=  errors.pass.msg  %></span>
+                <% } %>
                 <button type="submit">Ingresar</button>
             </section>                
         </form>

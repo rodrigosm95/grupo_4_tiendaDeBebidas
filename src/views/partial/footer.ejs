@@ -1,24 +1,38 @@
-<section class="footer">
-    <section class="left-footer">
-        <img class="logo" src="/images/Beer Mug Free SVG Cut File.png" alt="Logo">
+<% if (locals.isLogged) { %>
+    <section class="footer">
+        <section class="left-footer">
+            <img class="logo" src="/images/Beer Mug Free SVG Cut File.png" alt="Logo">
+        </section>
+        <section class="footer-navbars">
+            <nav class="footer-about-navbar">
+                <a href="">Contacto</a>
+                <a href="">Sobre nosotros</a>
+            </nav>
+            <nav class="footer-products-navbar">
+                <a href="/products">productos</a>
+                <a href="">categorías</a>
+                <a href="">ofertas</a>
+            </nav>
+            <nav class="footer-users-navbar">
+                <a href="/login">Login</a>
+                <a href="/register">Register</a>
+                <a href="/">Profile</a>
+            </nav>  
+        </section>
+        <p class="copyright">Copyright © 2022 Birritapp</p>
     </section>
-    <section class="footer-navbars">
-        <nav class="footer-about-navbar">
-            <a href="">Contacto</a>
-            <a href="">Sobre nosotros</a>
-        </nav>
-        <nav class="footer-products-navbar">
-            <a href="/products">productos</a>
-            <a href="">categorías</a>
-            <a href="">ofertas</a>
-        </nav>
-        <nav class="footer-users-navbar">
-            <a href="/login">Login</a>
-            <a href="/register">Register</a>
-            <a href="/">Profile</a>
-        </nav>  
+<% }else{ %>
+    <section style="height: 200px; display:flex;" class="footer">
+        <section style="display: flex; flex-wrap: wrap;" class="footer-navbars">
+            <nav style="width: 100% ;" class="footer-about-navbar">
+                <a href="">Contacto</a>
+                <a href="">Sobre nosotros</a>
+            </nav>
+            <p style="color: orange; display: flex;" class="copyright">Copyright © 2022 Birritapp</p>
+        </section>
     </section>
-    <p class="copyright">Copyright © 2022 Birritapp</p>
-</section>
+<% } %>
+
+
     
 

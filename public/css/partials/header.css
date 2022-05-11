@@ -5,6 +5,18 @@
     list-style: none;
 }
 
+.header p{
+    color: orange;
+}
+
+.header h1{
+    width: 100%;
+    display: flex;
+    color: orange;
+    margin: auto;
+    justify-content: center;
+}
+
 .header {
     background-color: black;
     width: 100%;
