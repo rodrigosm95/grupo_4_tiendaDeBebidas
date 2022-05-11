@@ -45,7 +45,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
-router.get('/register',guestMiddleware, index);
+router.get('/register',authMiddleware,guestMiddleware, index);
 router.post('/register', upload.single('avatar'), validaciones, store);
 
 

@@ -11,7 +11,7 @@ const validation = [
 ]
 
 router.get('/login', guestMiddleware , index);
-router.post('/login',validation ,login);
+router.post('/login',validation,login);
 router.get('/profile',authMiddleware, profile);
 router.get('/logout', logout)
 

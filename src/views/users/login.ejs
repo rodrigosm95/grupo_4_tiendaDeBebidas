@@ -23,6 +23,9 @@
                 <% if (locals.errors && errors.pass) { %>
                     <span style="color: red; margin:auto"><%=  errors.pass.msg  %></span>
                 <% } %>
+                <label class="label">
+                    <input type="checkbox" name="remember_user">Recordar mis datos
+                </label>
                 <button type="submit">Ingresar</button>
             </section>                
         </form>
