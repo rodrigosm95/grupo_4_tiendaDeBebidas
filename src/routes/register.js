@@ -4,6 +4,8 @@ const router = Router();
 const path = require('path');
 const multer = require('multer');
 const {body} = require('express-validator')
+const guestMiddleware= require('../middlewares/guestMiddleware')
+const authMiddleware= require('../middlewares/authMiddleware')
 
 const validaciones = [
     body('name').notEmpty().withMessage('tienes que escribir un nombre'),
@@ -43,7 +45,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
-router.get('/register', index);
+router.get('/register',guestMiddleware, index);
 router.post('/register', upload.single('avatar'), validaciones, store);
 
 

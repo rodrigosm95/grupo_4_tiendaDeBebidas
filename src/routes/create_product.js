@@ -3,6 +3,7 @@ const { index, store } = require('../controllers/create_product');
 const router = Router();
 const path = require('path');
 const multer = require('multer');
+const authMiddleware = require('../middlewares/authMiddleware')
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -16,7 +17,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
-router.get('/products/create', index);
+router.get('/products/create',authMiddleware, index);
 router.post('/products/guardar', upload.single('ProductImage'),store)
 
 module.exports = router;

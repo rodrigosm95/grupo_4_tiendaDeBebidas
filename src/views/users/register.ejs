@@ -25,12 +25,15 @@
 
                 <label class="label<%= locals.errors && errors.email ? "_error" : null %> "  for="email">Email</label >
                 <input class="imput" type="email" name="email" value="<%= locals.oldData ? oldData.email : null %> ">
+                <% if (locals.errors && errors.email) { %>
+                    <span style="color: red ; margin: auto;"><%=errors.email.msg %> </span>
+                <% } %>
 
                 <label class="label<%= locals.errors && errors.pass ? "_error" : null %> " for="">Password</label >
                 <input class="imput" type="password" name="pass">
                 
                 <% if (locals.errors && errors.avatar) { %>
-                    <span style="color: red; margin: auto"> <%= errors.avatar.msg %> </span>
+                    <span style="color: red; margin: auto"> <%= errors.avatar.msg %></span>
                 <% } %>
                 <input class="imput" type="file" name="avatar" placeholder="Foto de perfil">
             </section>

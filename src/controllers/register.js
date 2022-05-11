@@ -17,7 +17,14 @@ const controller = {
             let userInDb = user.findByField("email", req.body.email)
 
             if (userInDb) {
-                return res.render('./users/register');
+                return res.render('./users/register',{
+                    errors: {
+                        email: {
+                            msg: "Ese correo ya esta registrado"
+                        }
+                    },
+                    oldData: req.body
+                });
             };
     
             let userCreate = {

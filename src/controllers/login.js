@@ -1,7 +1,10 @@
-const {validationResult} = require('express-validator')
+const user = require("../models/user");
+const {validationResult} = require('express-validator');
+const bcryptjs = require("bcryptjs");
 
 const controller = {
-    index: (req,res) => res.render('./users/login'),
+    index: (req,res) => {
+        res.render('./users/login')},
     login: (req, res) => {
         const resultsValidations = validationResult(req);
 
@@ -11,7 +14,45 @@ const controller = {
                 oldData: req.body
             })
         }
-    }
+
+        let userToLogin = user.findByField('email', req.body.email) 
+
+        if(userToLogin){
+            let passOk = bcryptjs.compareSync(req.body.pass, userToLogin.pass)
+            if (passOk) {
+                delete userToLogin.pass;
+                req.session.userLogged = userToLogin;
+                return res.redirect('./profile');
+            } else {
+                return res.render('./users/login',{
+                    errors: {
+                        pass: {
+                            msg: 'la contraseña y correo electronico no coincide',
+                        }
+                    }
+                })
+            }
+
+            
+        }else{
+            return res.render('./users/login',{
+                errors: {
+                    email: {
+                        msg: 'El email no se encuentra registrado en nuestra base de datos',
+                    }
+                }
+            })
+        }
+    },
+    profile: (req,res) => {
+        console.log();
+       res.render('./users/profile',{
+            user: req.session.userLogged
+        })},
+    logout: (req,res) => {
+        req.session.destroy();
+        return res.redirect('./')
+    } 
 }
 
 module.exports = controller;
