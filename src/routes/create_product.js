@@ -12,7 +12,7 @@ const validaciones = [
     body('price').notEmpty().withMessage('tienes que escribir una provincia'), 
     body('stock').notEmpty().withMessage('tienes que escribir una localidad'), 
     body('categorie').notEmpty().withMessage('tienes que escribir un email'), 
-    body('ProductImage').custom((value, {req}) => {
+    body('image').custom((value, {req}) => {
         let file = req.file;
         let acceptedExt = ['.png', '.jpg', '.gif'];
 
@@ -42,7 +42,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 router.get('/products/create',authMiddleware, index);
-router.post('/products/guardar', upload.single('ProductImage'),store)
+router.post('/products/guardar', upload.single('image'),store)
 router.get('/products/created',authMiddleware, created);
 
 module.exports = router;

@@ -18,5 +18,15 @@
   "email": "r@r.com",
   "pass": "$2a$10$8LNIZkJVUKzhAcS.w3fQuucktUlqebS1y.wyOY.jXnZQW5t1kF5Gq",
   "avatar": "user-1652307145007.png"
+ },
+ {
+  "id": 3,
+  "name": "rodrigo san martin ",
+  "address": " 123",
+  "province": "Chaco ",
+  "location": "resistencia ",
+  "email": "rodrigo@rodrigo.com",
+  "pass": "$2a$10$ea/AWpG/dBPx4JAZtQDhdu/oQrKG0iFxXbE0W.MG3bcFba2/a9ob2",
+  "avatar": "user-1652309797773.png"
  }
 ]

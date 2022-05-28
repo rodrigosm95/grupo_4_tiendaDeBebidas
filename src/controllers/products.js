@@ -1,17 +1,26 @@
-const lista_de_productos = require("../data/products.json")
-const products = require('../models/product')
-const users = require('../models/user')
-const { update } = require("./update")
+const {products, images , categories} = require ('../database/models')
 
 const controller = {
-    index: (req,res) => res.render('./products/product_list',{
-        productos: lista_de_productos
-    }),
-    detail_product: (req, res) => {
-        let id = Number(req.params.id)
-        let productById = products.findByPk(id)
-        res.render('./products/detail', {
-            product: productById});
+    index: async (req,res) => {
+        try {
+            const productos = await products.findAll({include:{all:true}, order:[['price', 'desc']]});
+            const categorias = await categories.findAll({include:{all:true}});
+            res.send({productos})
+            // res.render('./products/product_list',{
+            //     productos: products
+            // })
+        } catch (error) {
+            res.status(500).send({message: error.message})
+        }
+},
+    detail_product: async (req, res) => {
+        try {
+            let product = await products.findByPk(req.params.id)
+            res.render('./products/detail', {
+                product: product});
+        } catch (error) {
+            res.status(500).send({message: error.message})
+        }
     },
     update: (req,res) => {
         let id = Number(req.params.id)
