@@ -38,7 +38,7 @@ const controller = {
                 image: req.file ? image.id : "default.png"         
             }
             let newProd = await products.create(data)
-            res.redirect('/products/created')
+            res.redirect('/products')
             
         } catch (error) {
             res.status(500).send({message: error.message})

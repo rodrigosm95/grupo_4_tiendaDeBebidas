@@ -3,24 +3,32 @@ const {products, images , categories} = require ('../database/models')
 const controller = {
     index: async (req,res) => {
         try {
-            const productos = await products.findAll({include:{all:true}, order:[['price', 'desc']]});
-            const categorias = await categories.findAll({include:{all:true}});
-            res.send({productos})
-            // res.render('./products/product_list',{
-            //     productos: products
-            // })
+            const productos = await products.findAll({include:{all:true}});
+            // res.send(productos)
+            res.render('./products/product_list',{
+                productos: productos
+            })
         } catch (error) {
             res.status(500).send({message: error.message})
         }
 },
     detail_product: async (req, res) => {
         try {
-            let product = await products.findByPk(req.params.id)
+            let product = await products.findByPk(req.params.id, {include:{all: true}})
             res.render('./products/detail', {
                 product: product});
         } catch (error) {
             res.status(500).send({message: error.message})
         }
+    },
+    categories: async (req,res) => {
+        let allProducts = await products.findAll({include:{all: true}, where:{
+            'category': req.params.id
+        }});
+        // res.send(allProducts)
+        res.render('./products/categories_products',{
+            productos : allProducts
+        })
     },
     update: (req,res) => {
         let id = Number(req.params.id)
@@ -28,18 +36,15 @@ const controller = {
         res.render('./products/update', {
             product: productById})
     },
-    categories: (req,res) => {
-        let allProducts = products.findAll();
-        let catProducts = allProducts.filter(oneproduct => oneproduct["categorie"] === req.params.id)
-        res.render('./products/categories_products',{
-            productos : catProducts
-        })
-    },
     
-    delete: (req,res) => {
-        let id = Number(req.params.id)
-        products.delete(id)
-        res.send("el borrado funciona")
+    delete: async (req,res) => {
+        try {
+            let prod_delete = await products.findByPk(req.params.id);
+            await prod_delete.destroy();
+            res.send("el producto fue borrado")
+        } catch (error) {
+            res.status(500).send({message: error.message})
+        }
     }
 }
 
