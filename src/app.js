@@ -16,14 +16,14 @@ app.listen(app.get('port'), listen);
 
 app.use(session({
     secret: 'shh es un secreto',
-    resave: false,
-    saveUninitialized: false
+    resave: true,
+    saveUninitialized: true
 }))
 app.use(cookies())
 app.use(userLoggedMiddlewar)
 app.use(express.static(resolve(__dirname, '../public')));
 app.use(express.static(resolve(__dirname, '../uploads')));
-app.use(express.urlencoded({ extended: false })); //procesar la informacion de un formulario
+app.use(express.urlencoded({ extended: true })); //procesar la informacion de un formulario
 app.use(method("m"));
 
 
@@ -33,5 +33,4 @@ app.use(require('./routes/main'));
 app.use(require('./routes/register'));
 app.use(require('./routes/login'));
 app.use(require('./routes/create_product'));
-app.use(require('./routes/update'));
 app.use(require('./routes/products'));

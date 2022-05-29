@@ -27,15 +27,13 @@
                     <input class="imput" type="number" name="stock" id="stock" value="<%= locals.oldData ? oldData.stock : null %> ">
 
                     <label class="label">Seleccione una categoria</label>
-                    <select class="imput" name="categorie" id="categorie">
-                        <option value="1">Categoria 1</option>
-                        <option value="2">Categoria 2</option>
-                        <option value="3">Categoria 3</option>
-                        <option value="4">Categoria 4</option>
-                        <option value="5">Categoria 5</option>
-                        <option value="6">Categoria 6</option>
+                    <select class="imput" name="category" id="category">
+                        <% for( let i = 0; i < categories.length; i++ ) { %>
+                            <option value="<%= categories[i].id %> ">
+                            <%= categories[i].name %> </option>
+                        <% } %>
                     </select>
-                    <input class="imput" type="file" name="ProductImage" id="ProductImage">
+                    <input class="imput" type="file" name="image" id="image">
                 <button type="submit">Guardar</button>
             </section>
         </form>
