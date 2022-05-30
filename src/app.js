@@ -38,6 +38,6 @@ app.use(require('./routes/login'));
 app.use(require('./routes/create_product'));
 app.use(require('./routes/products'));
 app.use(require('./routes/api_products'));
-app.use(require('./routes/api_users'));
+app.use(require('./routes/api'));
 
 

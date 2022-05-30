@@ -38,14 +38,15 @@ const controller = {
     updated: async (req,res) => {
         try {
             const producto = await products.findByPk(req.params.id);
-            const data = {
+            const data =  {
                 name: req.body.name,
                 description: req.body.description,
                 price: req.body.price,
                 stock: req.body.stock,
-                category: req.body.category    
+                category: producto.category,
+                image: producto.image   
             }
-            res.send(data)
+            res.send('Nose por qué no me llegan las cosas del body, ya intente de todo :´(')
             const producto_actualizado = await products.update(data)
         } catch (error) {
             res.status(500).send({message: error.message})

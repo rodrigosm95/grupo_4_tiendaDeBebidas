@@ -1,7 +1,7 @@
 const { Router } = require('express');
 const router = Router();
-const users = require('../controllers/api_users');
+const api = require('../controllers/api');
 
-router.get('/api/users', users.index)
+router.get('/api', api.index)
 
 module.exports = router

@@ -1,0 +1,30 @@
+<h2>USUARIOS</h2>
+<h3>cantidad de usuarios: <%= usuario.length %> </h3>
+<% usuario.forEach(element => { %>
+    <div style="border: solid 1px ;">
+        <p>id: <%= element.id %> </p>
+        <p>nombre: <%= element.name %> </p>
+        <p>email: <%= element.email %> </p>
+    </div>
+<% }) %>
+
+<h2>PRODUCTOS</h2>
+<H3>cantidad de productos: <%= producto.length %></H3>
+<% producto.forEach(element => { %>
+    <div style="border: solid 1px ;">
+        <p>id: <%= element.id %> </p>
+        <p>nombre: <%= element.name %> </p>
+        <p>descripcion: <%= element.description %> </p>
+    </div>
+<% }) %>
+
+<h2>CATEGORIAS</h2>
+<H3>cantidad de categorias: <%= categoria.length %></H3>
+<% categoria.forEach(element => { %>
+    <div style="border: solid 1px ;">
+        <p>id: <%= element.id %> </p>
+        <p>nombre: <%= element.name %> </p>
+        <p>contiene: <%= element.productos.length %> productos </p>
+    </div>
+<% }) %>
+
