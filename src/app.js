@@ -5,15 +5,18 @@ const method = require('method-override');
 const userLoggedMiddlewar = require('./middlewares/userLoggedMiddleware')
 const cookies = require('cookie-parser')
 const app = express();
+const cors = require('cors') 
 
-const listen = () => console.log('listening on port 3000');
+const listen = () => console.log('listening on port 3001');
 
-app.set('port', process.env.PORT || 3000);
+app.set('port', 3001);
 app.set('view engine', 'ejs');
 app.set('views', resolve(__dirname, './views'));
 
 app.listen(app.get('port'), listen);
 
+app.use(express.json())
+app.use(cors())
 app.use(session({
     secret: 'shh es un secreto',
     resave: true,
@@ -34,3 +37,7 @@ app.use(require('./routes/register'));
 app.use(require('./routes/login'));
 app.use(require('./routes/create_product'));
 app.use(require('./routes/products'));
+app.use(require('./routes/api_products'));
+app.use(require('./routes/api'));
+
+

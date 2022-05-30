@@ -30,18 +30,34 @@ const controller = {
             productos : allProducts
         })
     },
-    update: (req,res) => {
-        let id = Number(req.params.id)
-        let productById = products.findByPk(id)
+    update: async (req,res) => {
+        const producto = await products.findByPk(req.params.id)
         res.render('./products/update', {
-            product: productById})
+            product: producto})
+    },
+    updated: async (req,res) => {
+        try {
+            const producto = await products.findByPk(req.params.id);
+            const data =  {
+                name: req.body.name,
+                description: req.body.description,
+                price: req.body.price,
+                stock: req.body.stock,
+                category: producto.category,
+                image: producto.image   
+            }
+            res.send('Nose por qué no me llegan las cosas del body, ya intente de todo :´(')
+            const producto_actualizado = await products.update(data)
+        } catch (error) {
+            res.status(500).send({message: error.message})
+        }
     },
     
     delete: async (req,res) => {
         try {
             let prod_delete = await products.findByPk(req.params.id);
             await prod_delete.destroy();
-            res.send("el producto fue borrado")
+            res.redirect("/products")
         } catch (error) {
             res.status(500).send({message: error.message})
         }
